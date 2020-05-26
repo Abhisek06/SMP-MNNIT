@@ -23,6 +23,9 @@ def extra_curricular(request):
 def questions(request):
     return HttpResponse("Hello")
 
+def login(request):
+    return HttpResponse("Hello")
+
 def details(request):
     return HttpResponse("Hello")
 

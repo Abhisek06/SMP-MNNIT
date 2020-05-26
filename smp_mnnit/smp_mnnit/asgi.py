@@ -1,5 +1,5 @@
 """
-ASGI config for smpmnnit project.
+ASGI config for smp_mnnit project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'smpmnnit.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'smp_mnnit.settings')
 
 application = get_asgi_application()
