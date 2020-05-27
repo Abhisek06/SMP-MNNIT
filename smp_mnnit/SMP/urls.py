@@ -2,8 +2,9 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
-# Pipeline for the website.
+app_name = 'SMP'
 
+# Pipeline for the website.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = "home"),
@@ -14,9 +15,11 @@ urlpatterns = [
     path('extra_curricular/', views.extra_curricular, name = "extra_curricular"),
     path('questions/', views.questions, name = "questions"),
     path('departments/', views.departments, name = "departments"),
-    path('login/', views.login, name = "login"),
+    path('infrastructure/', views.infrastructure, name = "infrastructure"),
+    path('login/', views.loginbase, name = "loginbase"),
     path('contacts/', views.contacts, name = "contacts"),
     path('details/', views.details, name = "details"), 
     path('resources/', views.resources, name = "resources"),
+    path('logout/', views.logout_request, name = "logout_request"),
 
 ]

@@ -7,6 +7,9 @@ from django.contrib.auth import authenticate, login
 def home(request):
     return HttpResponse("Hello")
 
+def loginbase(request):
+    return HttpResponse("Hello")
+
 def about_us(request):
     return HttpResponse("Hello")
 
@@ -25,9 +28,6 @@ def extra_curricular(request):
 def questions(request):
     return HttpResponse("Hello")
 
-def login(request):
-    return HttpResponse("Hello")
-
 def details(request):
     return HttpResponse("Hello")
 
@@ -39,3 +39,7 @@ def contacts(request):
 
 def resources(request):
     return HttpResponse("Hello")
+
+def infrastructure(request):
+    return HttpResponse("Hello")
+
