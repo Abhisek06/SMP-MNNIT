@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+def get_image_path(instance, filename):
+     return 'images/{0}/{1}'.format(instance.username, filename)     # define image upload path
+
 # Create your models here.
 
 class Student(models.Model):                                        # for students
@@ -9,6 +12,7 @@ class Student(models.Model):                                        # for studen
     mentor_name = models.CharField(max_length = 30)
     branch = models.CharField(max_length = 40)
     syear = models.CharField(max_length = 10, default = "")         # year of student
+    img = models.ImageField(upload_to = get_image_path, default = "")
 
     def __str__(self):
         return self.username
