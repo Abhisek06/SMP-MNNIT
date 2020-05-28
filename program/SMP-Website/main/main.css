@@ -11,8 +11,9 @@
   border-bottom: 1px solid red;
 }
 body{
-  background-color: black;
+ background-color: black;
 }
+
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   color: blue;
