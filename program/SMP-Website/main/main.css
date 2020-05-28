@@ -10,7 +10,9 @@
   line-height: 1;
   border-bottom: 1px solid red;
 }
-
+body{
+  background-color: black;
+}
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   color: blue;
@@ -19,7 +21,9 @@
   text-shadow: cornflowerblue;
   float: right;
 }
-
+.p-4 .mb-3 .bg-light .rounded{
+  background-color: black;
+}
 .blog-header-logo:hover {
   text-decoration: none;
 }
