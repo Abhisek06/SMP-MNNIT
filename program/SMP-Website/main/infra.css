@@ -88,3 +88,41 @@ body {
     margin-top: 7rem;
   }
 }
+/* .life{
+  background-image: url(pics/scape1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  color: aliceblue;
+} */
+.container .marketing{
+  background-size: cover;
+}
+.col-md-7{
+  background-color: aquamarine;
+}
+.life{
+  background-color: blanchedalmond;
+}
+body{
+  background-color:whitesmoke;
+ }
+ .image1{
+   height: 600px;
+   width: 440px;
+ }
+ .image0{
+  height: 689px;
+  width: 450px;
+}
+.image2{
+  height: 600px;
+  width: 440px;
+}
+.image4{
+  height: 650px;
+  width: 440px;
+}
