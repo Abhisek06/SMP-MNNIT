@@ -1,0 +1,47 @@
+*{
+    background-color: dimgray;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 44px;
+    font-family: serif;
+    height: auto;
+    color: brown;
+    text-decoration: underline;
+    text-decoration-color: brown;
+     font-weight: bold;
+    text-shadow: 2px 2px #FF0000;
+}
+h2{
+    font-size: 37px;
+    font-family: cursive;
+    color: darksalmon;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-color: cornflowerblue;
+    text-shadow: 1px 1px #efefef;
+}
+h3{
+    font-size: 33px;
+    font-family: monospace;
+    color: black;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: firebrick;
+}
+h4{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: chocolate;
+    font-weight: 400;
+    text-decoration: none;
+    text-decoration-color: blueviolet;
+}
+p{
+    font-size: 25px;
+    font-family: inherit;
+    color: azure;
+    text-shadow: 1px 1px #333;
+}
+
