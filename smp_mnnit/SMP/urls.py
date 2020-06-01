@@ -13,13 +13,12 @@ urlpatterns = [
     path('academics/', views.academics, name = "academics"),
     path('campus_life/', views.campus_life, name = "campus_life"),
     path('extra_curricular/', views.extra_curricular, name = "extra_curricular"),
-    path('questions/', views.questions, name = "questions"),
-    path('departments/', views.departments, name = "departments"),
-    path('infrastructure/', views.infrastructure, name = "infrastructure"),
+    path('FAQ/', views.FAQ, name = "FAQ"),
     path('login/', views.loginbase, name = "loginbase"),
     path('contacts/', views.contacts, name = "contacts"),
     path('details/', views.details, name = "details"), 
     path('resources/', views.resources, name = "resources"),
+    path('Read_More/', views.readmore, name = "readmore"),
     path('logout/', views.logout_request, name = "logout_request"),
 
 ]

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .models import Student, Mentor
+from django.contrib import messages
 
 
 def home(request):
@@ -17,7 +18,8 @@ def loginbase(request):
             login(request, user)
             return redirect("SMP:home")
         else:
-            return HttpResponse("ERROR")
+            # messages.error(request, 'Invalid Credentials!')
+            return redirect("SMP:loginbase")
     
     
     return render(request, "SMP/signin.html")
@@ -32,19 +34,25 @@ def academics(request):
     return HttpResponse("Hello")
 
 def campus_life(request):
-    return HttpResponse("Hello")
+    return render(request, 'SMP/infra.html')
 
 def extra_curricular(request):
     return HttpResponse("Hello")
 
-def questions(request):
+def FAQ(request):
     return HttpResponse("Hello")
 
 def details(request):
-    return HttpResponse("Hello")
+    if request.user.is_authenticated:
+        us = request.user
+        stu = Student.objects.get(user = us)
+        mn = stu.mentor_name
+        print(mn)
+        print(stu)
+        return render(request,"SMP/mentor1.html", {'mentor2' : mn , 'student' : stu})
 
-def departments(request):
-    return HttpResponse("Hello")
+    else:
+        return redirect("SMP:loginbase")
 
 def contacts(request):
     return HttpResponse("Hello")
@@ -52,10 +60,10 @@ def contacts(request):
 def resources(request):
     return HttpResponse("Hello")
 
-def infrastructure(request):
-    return HttpResponse("Hello")
-
 def logout_request(request):
     logout(request)
     return redirect("SMP:loginbase")
+    
+def readmore(request):
+    return render(request, 'SMP/readMore.html')
 
