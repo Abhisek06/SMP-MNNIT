@@ -90,7 +90,7 @@ body {
   }
   
   .col-md-7{
-    background-color: rgb(283, 183, 99);
+    background-color: lemonchiffon;
     font-size: 5px;
   }
   .lead{
@@ -99,14 +99,14 @@ body {
     color: black;
   }
   .img1{
-    height: 600px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
   }
   .img2{
-    height: 700px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
   }
   .img6{
-    width: 440px;
-    height: 440px;
+    width: 400px;
+    height: 400px;
   }
