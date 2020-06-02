@@ -10,6 +10,7 @@ class Student(models.Model):                                        # for studen
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
     mentor_name = models.CharField(max_length = 30)
+    mentor_regn = models.CharField(default = "", max_length = 10)
     branch = models.CharField(max_length = 40)
     syear = models.CharField(max_length = 10, default = "")         # year of student
 
@@ -18,11 +19,10 @@ class Student(models.Model):                                        # for studen
 
 class Mentor(models.Model):                                         # for mentors
 
-    name = models.CharField(max_length = 30)
-    usname = models.CharField(max_length = 16)
-    pasw = models.CharField(max_length = 16)
-    dept = models.CharField(max_length = 40)
-    myear = models.CharField(max_length = 10, default = "")         # year of mentor
+    mentor = models.OneToOneField(Student, models.CASCADE, default = "")
+    roomn = models.CharField(max_length = 7, default = "")
+    hostel = models.CharField(max_length = 40, default = "")
+    contactn = models.CharField(max_length = 15, default = "")
 
     def __str__(self):
-        return self.usname
+        return self.mentor.user.username

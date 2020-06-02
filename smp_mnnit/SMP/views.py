@@ -46,10 +46,16 @@ def details(request):
     if request.user.is_authenticated:
         us = request.user
         stu = Student.objects.get(user = us)
-        mn = stu.mentor_name
-        print(mn)
+        m2n = stu.mentor_name                                            # 2nd year mentor name
+        m2reg = stu.mentor_regn                                          # 2nd year mentor registration number
+        mentor2ndus = User.objects.get(username = m2reg)                  # 2nd year mentor from users
+        mentor2nd = Student.objects.get(user = mentor2ndus)              # 2nd year mentor from students
+        m3n = mentor2nd.mentor_name                                            # 3rd year mentor name
+        m3reg = mentor2nd.mentor_regn                                          # 3rd year mentor registration number
+
+        print(mentor2nd)
         print(stu)
-        return render(request,"SMP/mentor1.html", {'mentor2' : mn , 'student' : stu})
+        return render(request,"SMP/mentor1.html", {'mentor2' : m2n,'mentor2reg' : m2reg, 'student' : stu, 'mentor3' : m3n, 'mentor3reg' : m3reg})
 
     else:
         return redirect("SMP:loginbase")
@@ -66,4 +72,17 @@ def logout_request(request):
     
 def readmore(request):
     return render(request, 'SMP/readMore.html')
+
+def profile(request, usn):
+    usnm = User.objects.get(username = usn)
+    stud = Student.objects.get(user = usnm)
+    ment = Mentor.objects.get(mentor = stud)
+    roomno = ment.roomn
+    contactno = ment.contactn
+    hstl = ment.hostel
+    fname = ment.mentor.user.first_name
+    lname = ment.mentor.user.last_name
+    year = ment.mentor.syear
+    print(usn)
+    return render(request, 'SMP/profile.html', {'username' : usn, 'room':roomno, 'contact':contactno, 'hostel':hstl, 'firstname':fname, 'lastname':lname, 'year':year})
 

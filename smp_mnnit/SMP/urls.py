@@ -17,6 +17,7 @@ urlpatterns = [
     path('login/', views.loginbase, name = "loginbase"),
     path('contacts/', views.contacts, name = "contacts"),
     path('details/', views.details, name = "details"), 
+    path('details/<str:usn>/', views.profile, name = "profile"), 
     path('resources/', views.resources, name = "resources"),
     path('Read_More/', views.readmore, name = "readmore"),
     path('logout/', views.logout_request, name = "logout_request"),
