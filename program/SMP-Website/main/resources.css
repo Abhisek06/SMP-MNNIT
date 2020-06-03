@@ -90,7 +90,7 @@ body {
   }
   
   .col-md-7{
-    background-color: lemonchiffon;
+    background-color: lightseagreen;
     font-size: 5px;
   }
   .lead{
@@ -109,4 +109,8 @@ body {
   .img6{
     width: 400px;
     height: 400px;
+  }
+  .img7{
+    width: 600px;
+    height: 820px;
   }
