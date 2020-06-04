@@ -1,0 +1,19 @@
+#from .models import Student, Mentor
+from import_export.admin import ImportExportModelAdmin
+from django.contrib import admin
+from .models import Student,Mentor
+
+@admin.register(Student)
+class PersonAdmin(ImportExportModelAdmin):
+    pass
+
+@admin.register(Mentor)
+class PersonAdmin(ImportExportModelAdmin):
+    pass
+
+
+
+
+#admin.site.register(Student)
+#admin.site.register(Mentor)
+

@@ -1,0 +1,26 @@
+body {
+    padding-top: 5rem;
+  }
+  .starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+body{
+    background-image: url(pics/blackCar.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    color: whitesmoke;
+}  
+.bd-placeholder-img{
+    height: 150px;
+    width: 150px;
+    float: right;
+    border: 3px solid #ccc;
+}
+.land{
+    font-size: 20px;
+}
