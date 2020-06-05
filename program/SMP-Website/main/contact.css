@@ -1,5 +1,48 @@
-/* Show it is fixed to the top */
-body {
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+    padding: 60px 15px 0;
+  }
+  
+  .footer {
+    background-color: #f5f5f5;
+  }
+  
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  code {
+    font-size: 80%;
+  }
+
+
+
+  
+  table {
+    border-collapse: separate;
+    /* border-spacing: 0 15px; */
+    table-layout: fixed;
+    width: 300px;
+  }
+  th {
+    color:black;
+    vertical-align: middle;
+  }
+  th,
+  td {
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    /* padding: 5px; */
+  }
+
+
+
+  .flex-shrink-0{
     min-height: 75rem;
     padding-top: 4.5rem;
     background-image: url(pics/contact.jpg);
@@ -7,27 +50,32 @@ body {
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
-    height: 100%;
+    height: 30%;
     width: 100%;
     background-size: cover;
     opacity: 1200%;
-  }  
-.container-marketing{
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  max-width: 530px;
-  padding: 15px;
-  margin: auto;
-}
+  }
+
+
+
+  .container-marketing{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 530px;
+    padding: 15px;
+    margin: auto;
+  }
+
+    
