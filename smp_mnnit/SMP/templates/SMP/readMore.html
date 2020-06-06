@@ -12,7 +12,9 @@
     <div class="heading">
         <h1 >    Know More About Our College</h1>
         <div style="float: right;">
-        <button onclick="location.href='..';" id="myButton" style="width:50%;" style="background-color: transparent;" style="float: right;" class="btn btn-sm btn-outline-secondary" type="submit" href="mainLite.html">Back To Home</button>
+        <button onclick="location.href='../';" id="myButton" style="width:50%;" style="background-color: transparent;" style="float: right;" class="btn btn-sm btn-outline-secondary" type="submit" href="../">
+            <img src="{% static "SMP/blog/pics/logo.png" %}" alt="logo" width="50px" height="50px" >
+        </button>
         </div>
     </div><hr style="color: brown;">
     </div><hr>
@@ -33,7 +35,7 @@ In the year 1972, the Institute initiated a self employment project and establis
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Sz6YRpyefpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!-- <aside style="float: right;"><iframe width="560" height="315" src="https://www.youtube.com/embed/SBXi7X_Me-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></aside> -->
         <br><br>
-       <a style="color: whitesmoke;" target="_blank" href="pics/map.pdf">View College Map</a>
+       <a style="color: whitesmoke;" target="_blank" href="{% static "SMP/blog/pics/map.pdf" }%">View College Map</a>
         <br> <p class="mt-5 mb-3 text-muted">&copy; SMP-Mnnit Allahabad</p>
     </div><br><br><br>
 </body>

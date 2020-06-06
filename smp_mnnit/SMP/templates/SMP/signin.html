@@ -54,9 +54,17 @@
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" name="passw" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-3">
-    <label>
+    {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+        <strong> {{message}} </strong>
+        <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span> -->
+        <!-- </button> -->
+      </div>
+    {%endfor%}
+    <!-- <label>
       <input type="checkbox" value="remember-me"> Remember me
-    </label>
+    </label> -->
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   <p class="mt-5 mb-3 text-muted">&copy; SMP-Mnnit Allahabad</p>

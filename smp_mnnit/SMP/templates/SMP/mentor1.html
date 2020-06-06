@@ -34,7 +34,9 @@
   </head>
   <body class="py-4">
     <div class="container">
-  <img src="{% static "SMP/blog/pics/logo.png" %}" alt="Logo" style="float: right;" width="100">
+      <a href="../">
+        <img src="{% static "SMP/blog/pics/logo.png" %}" alt="Logo" style="float: right;" width="100">
+      </a>
   <h1>Mentors</h1>
   <p class="lead">Find Your Mentors Family Alloted Here</p>
   <p>Please maintain the decorum, contact Second Years and don't just move up to Final Year Mentors.</p>
@@ -75,11 +77,12 @@
   <h2 class="mt-4">Final Year Mentors</h2>
   <p>These are your Mentor Team Head,feel free to contact them only in case of acute emergency</p>
 </div>
-
-<div style="background-color: burlywood"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
-<div style="background-color: burlywood"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
+{% for mentor in mentor4 %}
+<div style="background-color: burlywood"class="container themed-container"><a class="link1" href=" finalyear/{{mentor}}/ " > {{ mentor }} </a></div>
+{% endfor %}
+<!-- <div style="background-color: burlywood"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
 <div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
-<div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
+<div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div> -->
 <br> <p>&copy; SMP - MNNIT </p>
 </body>
 </html>

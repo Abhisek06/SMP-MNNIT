@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Student, Mentor
+from .models import Student, Mentor, FinalMentor
 from django.contrib import messages
 
 
@@ -18,29 +18,30 @@ def loginbase(request):
             login(request, user)
             return redirect("SMP:home")
         else:
-            # messages.error(request, 'Invalid Credentials!')
+            messages.info(request, 'Invalid Credentials!')
+            
             return redirect("SMP:loginbase")
     
     
     return render(request, "SMP/signin.html")
 
-def about_us(request):
-    return HttpResponse("Hello")
+def contacts(request):
+    return render(request, 'SMP/contact.html')
 
-def general_info(request):
-    return HttpResponse("Hello")
+def events(request):
+    return render(request, 'SMP/events.html')
 
 def academics(request):
-    return HttpResponse("Hello")
+    return render(request, 'SMP/academics.html')
 
 def campus_life(request):
     return render(request, 'SMP/infra.html')
 
 def extra_curricular(request):
-    return HttpResponse("Hello")
+    return render(request, 'SMP/extra.html')
 
 def FAQ(request):
-    return HttpResponse("Hello")
+    return render(request, 'SMP/faq.html')
 
 def details(request):
     if request.user.is_authenticated:
@@ -52,19 +53,18 @@ def details(request):
         mentor2nd = Student.objects.get(user = mentor2ndus)              # 2nd year mentor from students
         m3n = mentor2nd.mentor_name                                            # 3rd year mentor name
         m3reg = mentor2nd.mentor_regn                                          # 3rd year mentor registration number
-
-        print(mentor2nd)
-        print(stu)
-        return render(request,"SMP/mentor1.html", {'mentor2' : m2n,'mentor2reg' : m2reg, 'student' : stu, 'mentor3' : m3n, 'mentor3reg' : m3reg})
+        branchm = stu.branch
+        fment = FinalMentor.objects.filter(dept = branchm)
+        return render(request,"SMP/mentor1.html", {'mentor2' : m2n,'mentor2reg' : m2reg, 'student' : stu, 'mentor3' : m3n, 'mentor3reg' : m3reg, 'mentor4': fment })
 
     else:
         return redirect("SMP:loginbase")
 
-def contacts(request):
-    return HttpResponse("Hello")
+def clubs(request):
+    return render(request,"SMP/clubs.html")
 
 def resources(request):
-    return HttpResponse("Hello")
+    return render(request,"SMP/resources.html")
 
 def logout_request(request):
     logout(request)
@@ -83,6 +83,17 @@ def profile(request, usn):
     fname = ment.mentor.user.first_name
     lname = ment.mentor.user.last_name
     year = ment.mentor.syear
-    print(usn)
     return render(request, 'SMP/profile.html', {'username' : usn, 'room':roomno, 'contact':contactno, 'hostel':hstl, 'firstname':fname, 'lastname':lname, 'year':year})
 
+def finalprofile(request, name):
+
+    mentf = FinalMentor.objects.get(name = name)
+    mentf_regn = mentf.regn
+    mentf_roomn = mentf.roomn
+    mentf_contact = mentf.contactn
+    mentf_hostel = mentf.hostel
+    mentf_dept = mentf.dept
+    return render(request, 'SMP/profile4.html', {'username' : mentf_regn, 'room':mentf_roomn, 'contact':mentf_contact, 'hostel':mentf_hostel, 'name' : name, 'year': 'Final'})
+
+def sports(request):
+    return render(request, 'SMP/sports.html')

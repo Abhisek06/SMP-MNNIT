@@ -1,0 +1,14 @@
+/* Show it is fixed to the top */
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+    background-image: url(pics/am2.jpeg);
+    color: ivory;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    opacity: 1200%;
+  }  

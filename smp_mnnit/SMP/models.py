@@ -26,3 +26,14 @@ class Mentor(models.Model):                                         # for mentor
 
     def __str__(self):
         return self.mentor.user.username
+
+class FinalMentor(models.Model):                                         # for mentors
+
+    regn = models.CharField(max_length = 16)
+    dept = models.CharField(max_length = 40)
+    roomn = models.CharField(max_length = 7, default = "")
+    hostel = models.CharField(max_length = 40, default = "")
+    contactn = models.CharField(max_length = 15, default = "")
+    name = models.CharField(max_length = 40, default = "")
+    def __str__(self):
+        return self.name
