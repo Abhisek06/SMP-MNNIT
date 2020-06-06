@@ -8,6 +8,8 @@ from django.contrib import messages
 
 def home(request):
     return render(request, "SMP/mainLite.html")
+def main_dark(request):
+    return render(request, "SMP/main.html")
 
 def loginbase(request):
     if request.method == "POST":
@@ -18,7 +20,7 @@ def loginbase(request):
             login(request, user)
             return redirect("SMP:home")
         else:
-            # messages.error(request, 'Invalid Credentials!')
+            messages.info(request,'Invalid Credentials!!!!')
             return redirect("SMP:loginbase")
     
     

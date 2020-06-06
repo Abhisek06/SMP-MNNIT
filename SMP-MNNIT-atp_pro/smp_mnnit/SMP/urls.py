@@ -8,6 +8,7 @@ app_name = 'SMP'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = "home"),
+    path('main_dark/', views.main_dark, name = "home_dark"),
     path('about_us/', views.about_us, name = "about_us"),
     path('general_info/', views.general_info, name = "general_info"),
     path('academics/', views.academics, name = "academics"),

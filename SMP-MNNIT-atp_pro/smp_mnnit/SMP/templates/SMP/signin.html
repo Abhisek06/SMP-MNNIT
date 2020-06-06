@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
     <!-- Bootstrap core CSS -->
-<link href="{% static "SMP\assets\dist\css\bootstrap.css"%}" rel="stylesheet">
+<link href="{% static "SMP/assets/dist/css/bootstrap.css"%}" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -31,12 +31,12 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href={% static "SMP\blog\signin.css"%} rel="stylesheet">
+    <link href={% static "SMP/blog/signin.css"%} rel="stylesheet">
   </head>
   <body class="text-center">
     <form class="form-signin">
       <!-- Image -->
-        <img class="mb-4" src={% static "SMP\blog\pics\download.png"%} alt="" width="72" height="72">
+        <img class="mb-4" src={% static "SMP/blog/pics/download.png"%} alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <!-- Email -->
         <label for="inputEmail" class="sr-only">Registration Number</label>
@@ -49,6 +49,11 @@
           <label>
              <input type="checkbox" value="remember-me"> Remember me
           </label>
+          {% for message in messages %}
+          <h3>
+            {{message}}
+          </h3>
+          {% endfor %}
         </div>
         <!-- Button -->
         <button onclick="location.href={% static 'details/'%};" id="myButton"class="btn btn-lg btn-primary btn-block" type="submit" href="mentor1.html">Sign in</button>
