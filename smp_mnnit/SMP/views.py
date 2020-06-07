@@ -10,6 +10,8 @@ def home(request):
     return render(request, "SMP/homepage.html")
 
 def loginbase(request):
+    if request.user.is_authenticated:
+        return redirect("SMP:details")
     if request.method == "POST":
         uname = request.POST.get("reg_n", "")
         paswo = request.POST.get("passw", "")
@@ -97,3 +99,18 @@ def finalprofile(request, name):
 
 def sports(request):
     return render(request, 'SMP/sports.html')
+
+def selfdetails(request):
+    usn = request.user
+    usnm = User.objects.get(username = usn)
+    stud = Student.objects.get(user = usnm)
+    # ment = Mentor.objects.get(mentor = stud)
+    # roomno = ment.roomn
+    # contactno = ment.contactn
+    # hstl = ment.hostel
+    primarymentor = stud.mentor_name
+    primarymentorusn = stud.mentor_regn
+    fname = stud.user.first_name
+    lname = stud.user.last_name
+    year = stud.syear
+    return render(request, 'SMP/profileself.html', {'username' : usn, 'pmentor':primarymentor,'pmentorusn':primarymentorusn, 'firstname':fname, 'lastname':lname, 'year':year})

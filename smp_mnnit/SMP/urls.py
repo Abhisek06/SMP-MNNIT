@@ -22,6 +22,7 @@ urlpatterns = [
     path('details/finalyear/<str:name>/', views.finalprofile, name = "profile4"), 
     path('resources/', views.resources, name = "resources"),
     path('Read_More/', views.readmore, name = "readmore"),
+    path('Your_profile/', views.selfdetails, name = "selfdetails"),
     path('logout/', views.logout_request, name = "logout_request"),
 
 ]
