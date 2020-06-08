@@ -11,15 +11,13 @@
     margin-left: 80px;
 }
 body{
-    background-image: url(pics/uk4.jpeg);
+    background-image: url(pics/uk4.jpg);
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
     height: 100%;
     width: 100%;
     background-size: cover;
-    margin-right: 150px;
-    margin-left: 80px;
 }
 .para{
     color: blanchedalmond;
@@ -29,3 +27,23 @@ body{
     margin-left: 80px;
     float: center;
 }
+
+.container-marketing{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+ top: 10%;
+ left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 530px;
+    padding: 15px;
+    margin: auto;
+  }
