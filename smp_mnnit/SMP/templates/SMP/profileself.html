@@ -31,7 +31,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="../mentors/">Go To Mentors</a>
+  <a class="navbar-brand" href="../details/">Go To Mentors</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -45,11 +45,22 @@
   </div>
   <img class="bd-placeholder-img" src="{% static "SMP/blog/pics/uk2.jpg" %}" alt="Pic"> 
 <div class="land">
+  {% if year == "4" %}
     <ul>
-        <li>Primary Mentor : <a href="../details/{{pmentorusn}} ">{{pmentor}}</a></li>
+       <li>Registration Number : {{username}} </li>
+    </ul>
+      {%elif year == "3" %}
+      <ul>
+        <li>Primary Mentor : <a href="../details/finalyear/{{pmentor}}/ ">{{pmentor}}</a></li>
         <li>Registration Number : {{username}} </li>
         <!-- <li>Hostel : {{hostel}}</li> -->
-    </ul>
+      </ul> {% else %}
+        <ul>
+        <li>Primary Mentor : <a href="../details/{{pmentorusn}}/ ">{{pmentor}}</a></li>
+        <li>Registration Number : {{username}} </li>
+        </ul>
+      {%endif%}
+    
 </div>
 </main><!-- /.container -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

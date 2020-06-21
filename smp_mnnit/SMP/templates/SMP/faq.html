@@ -22,7 +22,7 @@
         -ms-user-select: none;
         user-select: none;
       }
-
+        .more {display: none;}
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -89,6 +89,20 @@
         </div>
     
         <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">What all extra activities will I have the exposure to, for personality development?</h2>
+           <p class="life">Once you reach here at MNNIT you will be provided with ample of opportunities in the face of a number of clubs and committees for which you help you identify your talents and your strength and thus work upon them to leave no stone unturned. <span class="dots">...</span><span class="more"> Talking about the various committees of our college from the cultural perspective we have: Dance committee (which is further divided into other subcategories), Drams committee (which is also further divided into other subcategories), MHM (Media House of MNNIT), Music Committee, Arts Committee, Oration Committee, Footprints. Now talking from extra co-curricular point of view we have: Student Mentorship Program, Gnosis Quiz Club, Computer Coding Club (CC Club), Robotics Club, Aero Club, Astronomy Club, E- Cell (Entrepreneurship -Cell), Literary Club. If you are interested in sports then we have MNNIT Athletic Club, MNNIT Football Club, MNNIT Cricket Club, Table Tennis, Lawn Tennis, Volleyball, Basketball, Badminton, Hockey, Judo-Karate, Skating facilities equipped with coaching staff available for you. For first year students the entry to the cultural committees can be either through Swagat Auditions (Official Fresher’s) or after Swagat as per the audition conducted by respective committee/club. Entry to the technical clubs is mostly open post Swagat time and will be done through the interviews and that for Sports Club is subjected to the trials. All in all here at MNNIT you will witness sea of opportunities, all you have to do is just have faith in yourself and discover and develop yourself. </span><button onclick="myFunction()" class="myBtn">Read more</button></p>
+           </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Will I be entitled to any kind of scholarship by college to support my tuition fees?</h2>
+           <p class="life">One of the ways, college helps one financially is by providing scholarship to the students who perform well in academics. <span class="dots">...</span><span class="more">  If you will keep working hard and will put genuine efforts, then even college steps forward to honor your hard work and determination to support you financially. There are different types of scholarships provided by college for students coming from somewhat weak financial background to meet their day to day needs in college as well as helping them in terms of fees. All this is looked after by Student Welfare Department of MNNIT, for knowing more about the requirements and other things related to scholarship please click on the link provided below :-<br> <a href="https://www.mnnit.ac.in/swo/swo.php#hes">Click Here To Know More</a> </span><button onclick="myFunction()" class="myBtn">Read more</button></p>
+            </div>
+        </div>
     
        
     
@@ -104,6 +118,33 @@
 
 
 </main>
+
+ <script>
+    var allButtons = document.querySelectorAll('.myBtn');
+allButtons.forEach(function(btn){
+  btn.addEventListener('click', myFunction);
+});
+
+function myFunction() {
+  var allBtns = document.querySelectorAll(".myBtn");
+  var allDots = document.querySelectorAll(".dots");
+  var allMore = document.querySelectorAll(".more");
+
+  var btnText = allBtns[[...allBtns].indexOf(this)];
+  var dots = allDots[[...allBtns].indexOf(this)];
+  var moreText = allMore[[...allBtns].indexOf(this)];
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src= "{static "assets/js/vendor/jquery.slim.min.js" }"><\/script>')</script><script src={% static "SMP\assets\dist\js\bootstrap.bundle.js"%}></script></body>
 </html>

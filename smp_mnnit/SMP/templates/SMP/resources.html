@@ -22,7 +22,7 @@
         -ms-user-select: none;
         user-select: none;
       }
-
+      .more {display: none;}
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -186,7 +186,8 @@
   </p><br>
   <h4>What to do in case of an emergency/falling ill?  </h4>
   <p class="lead">In case of an emergency we have a 24x7 available Ambulance, which you can call by dialing an emergency number which is provided by the guards present in every hostel. If it’s not serious then one may take a stroll to the dispensary as it is situated inside campus in Staff Colony only.</p>
-  <h4>Facilities availablein Dispensary</h4>
+  <span class="dots">...</span><span class="more">
+        <h4>Facilities availablein Dispensary</h4>
   <ul class="lead" style="text-align: left;">
     <li>Consultation & Dispensing of medicines to students, staff & their dependents.</li>
     <li>Special facilities of E.C.G., sugar testing by Glucometer</li>
@@ -202,9 +203,11 @@
         <li>Dispensary Contact number :- 0532 227 1089</li>
       </ul>
   </ul>
+      </span>
+        <button class="myBtn">Read more</button>
 </div>
 <div class="col-md-5">
-  <img src={% static "SMP\blog\pics\disp.png"%} alt="avish1" class="img7">
+  <img alt="avish1" class="img7" src={% static "SMP\blog\pics\disp.png"%}>
   <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
 </div>
 
@@ -247,6 +250,7 @@
       <h2 class="featurette-heading">Hotels Near MNNIT</h2>
 <p class="lead">If you fail to book a room at the guest house and don’t want to make your guest crash at a hostel room, here’s a coveted list of hotels around the institute that are known for their good service and student-friendly rates. Check them out!
 </p><br>
+      <span class="dots">...</span><span class="more">
 <!-- <h4>What to do in case of an emergency/falling ill?  </h4>
 <p class="lead">In case of an emergency we have a 24x7 available Ambulance, which you can call by dialing an emergency number which is provided by the guards present in every hostel. If it’s not serious then one may take a stroll to the dispensary as it is situated inside campus in Staff Colony only.</p>
 <h4>Facilities availablein Dispensary</h4> -->
@@ -309,6 +313,9 @@
     <li><strong>Phone : </strong>0124 620 1014 </li>
   </ul><br>
 </ul>
+        </span>
+        <button class="myBtn">Read more</button>
+
 </div>
 <div class="col-md-5">
 <img src={% static "SMP\blog\pics\hotels.jpg"%} alt="avish1" class="img7">
@@ -342,6 +349,32 @@
     <p>&copy; SMP - MNNIT Allahabad</p>
   </footer>
 </main>
+    <script>
+    var allButtons = document.querySelectorAll('.myBtn');
+allButtons.forEach(function(btn){
+  btn.addEventListener('click', myFunction);
+});
+
+function myFunction() {
+  var allBtns = document.querySelectorAll(".myBtn");
+  var allDots = document.querySelectorAll(".dots");
+  var allMore = document.querySelectorAll(".more");
+
+  var btnText = allBtns[[...allBtns].indexOf(this)];
+  var dots = allDots[[...allBtns].indexOf(this)];
+  var moreText = allMore[[...allBtns].indexOf(this)];
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="{%static "SMP/assets/js/vendor/jquery.slim.min.js" %}"><\/script>')</script><script src={% static "SMP\assets\dist\js\bootstrap.bundle.js"%}></script></body>
 </html>

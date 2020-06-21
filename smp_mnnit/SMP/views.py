@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .models import Student, Mentor, FinalMentor
 from django.contrib import messages
+import csv
+from django.contrib.auth.decorators import user_passes_test
 
 
 def home(request):
@@ -49,15 +51,16 @@ def details(request):
     if request.user.is_authenticated:
         us = request.user
         stu = Student.objects.get(user = us)
-        m2n = stu.mentor_name                                            # 2nd year mentor name
-        m2reg = stu.mentor_regn                                          # 2nd year mentor registration number
-        mentor2ndus = User.objects.get(username = m2reg)                  # 2nd year mentor from users
-        mentor2nd = Student.objects.get(user = mentor2ndus)              # 2nd year mentor from students
-        m3n = mentor2nd.mentor_name                                            # 3rd year mentor name
-        m3reg = mentor2nd.mentor_regn                                          # 3rd year mentor registration number
+        m2n = stu.mentor_name                                            # year+1 mentor name
+        m2reg = stu.mentor_regn                                          # year+1 mentor registration number
+        mentor2ndus = User.objects.get(username = m2reg)                  # year+1 mentor from users
+        mentor2nd = Student.objects.get(user = mentor2ndus)              # year+1 mentor from students
+        m3n = mentor2nd.mentor_name                                            # year+2 mentor name
+        m3reg = mentor2nd.mentor_regn                                          # year+2 mentor registration number
         branchm = stu.branch
+        year = stu.syear
         fment = FinalMentor.objects.filter(dept = branchm)
-        return render(request,"SMP/mentor1.html", {'mentor2' : m2n,'mentor2reg' : m2reg, 'student' : stu, 'mentor3' : m3n, 'mentor3reg' : m3reg, 'mentor4': fment })
+        return render(request,"SMP/mentor1.html", {'mentor2' : m2n,'mentor2reg' : m2reg, 'student' : stu, 'mentor3' : m3n, 'mentor3reg' : m3reg, 'mentor4': fment, 'year':year })
 
     else:
         return redirect("SMP:loginbase")
@@ -114,3 +117,24 @@ def selfdetails(request):
     lname = stud.user.last_name
     year = stud.syear
     return render(request, 'SMP/profileself.html', {'username' : usn, 'pmentor':primarymentor,'pmentorusn':primarymentorusn, 'firstname':fname, 'lastname':lname, 'year':year})
+
+@user_passes_test(lambda u: u.is_superuser)  
+def run(request):
+    fhand = open('SMP/scripts/many/dat.csv')
+    reader = csv.reader(fhand)
+
+
+    for row in reader:
+        
+        post, created = User.objects.get_or_create(username = row[1])
+
+        post.set_password(row[2])
+        post.first_name = row[3]
+        post.last_name = row[4]
+
+        post.save()
+        print(post)
+    
+    return HttpResponse('data added')
+
+    

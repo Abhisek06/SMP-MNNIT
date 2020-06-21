@@ -24,5 +24,6 @@ urlpatterns = [
     path('Read_More/', views.readmore, name = "readmore"),
     path('Your_profile/', views.selfdetails, name = "selfdetails"),
     path('logout/', views.logout_request, name = "logout_request"),
+    path('data_add/', views.run, name = "run"),
 
 ]

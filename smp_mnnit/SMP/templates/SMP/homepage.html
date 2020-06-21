@@ -26,37 +26,39 @@
         }
       }
     </style>
-      <style> 
-            .geeks { 
-                width:50%; 
-                height:300px; 
-            } 
-            img { 
+      <style>
+            img {
               float:right;
-                width:100%; 
-                height:100%; 
-            } 
-        </style> 
-   
+                width:100%;
+                height:100%;
+            }
+        </style>
+<!--    <style>-->
+<!--      .geeks { -->
+<!--                width:50%; -->
+<!--                height:300px; -->
+<!--            } -->
+<!--    </style>-->
+
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{% static "SMP/blog/mainLi.css" %}" rel="stylesheet">
+    <link href="{% static "SMP/blog/exp.css" %}" rel="stylesheet">
   </head>
-  <body>
-    <br>
-    <div class="container">
-        <img src="{% static "SMP/blog/pics/download.png" %}" alt="logo" class="logocollege">
 
-  <header class="blog-header py-3">
+
+
+  <body>
+    <div class="container">
+      <br>
+        <img src="{% static "SMP/blog/pics/logo.png" %}" alt="logo" class="logocollege img-responsive">
+    <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="#">STUDENT MENTORSHIP PROGRAMME - MNNIT ALLAHABAD</a>
+        <h1 style="font-size:25px">STUDENT MENTORSHIP PROGRAMME - MNNIT ALLAHABAD</h1>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="text-muted" href="#" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
-        </a>
         {% if user.is_authenticated %}
           <a class="btn btn-sm btn-outline-secondary" href="logout/">Logout</a>
           <a class="btn btn-sm btn-outline-secondary" href="Your_profile/">details</a>
@@ -68,18 +70,17 @@
     </div>
   </header>
 
-  <div class="nav-scroller py-1 mb-2">
-    <nav class="nav_d-flex_justify-content-between">
-      <a class="p-2 text-muted" href="details/">Mentors</a>
-      <a class="p-2 text-muted" href="academics/">Academics</a>
-      <!-- <a class="p-2 text-muted" href="#">Departments</a> -->
-      <a class="p-2 text-muted" href="campus_life/">Campus Life</a>
-      <a class="p-2 text-muted" href="resources/">Resources</a>
-      <a class="p-2 text-muted" href="extra_curricular/">Extra-Curricular</a>
-      <a class="p-2 text-muted" href="FAQ/">FAQ</a>
-      <a class="p-2 text-muted" href="contacts/">Contact Us</a>
-    </nav>
-  </div>
+      <div class="nav-scroller">
+            <a class="p-2 text-muted"  href="details/">Mentors</a>
+            <a class="p-2 text-muted" href="academics/">Academics</a>
+            <a class="p-2 text-muted" href="campus_life/">Campus Life</a>
+            <a class="p-2 text-muted" href="resources/">Facilities</a>
+            <a class="p-2 text-muted" href="extra_curricular/">Extra-Curricular</a>
+            <a class="p-2 text-muted" href="FAQ/">FAQ'S</a>
+             <a class="p-2 text-muted" href="contacts/">Contact Us</a>
+
+      </div>
+ <hr class="featurette-divider">
 
   <div id="continue-read" class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
@@ -101,35 +102,40 @@
           <br>
           <p>The foundation stone was laid by Jawaharlal Nehru, the first Prime Minister of India.The main building of the college was inaugurated by Prime Minister Lal Bahadur Shastri on 18 April 1965.</p>
         </div>
-        <div class="col-auto d-none d-lg-block">
-          
-        </div>
       </div>
     </div>
-   
-    <div class = "geeks"> 
-      <img src= "{% static "SMP/blog/pics/Inauguration_of_MNNIT.jpg" %}" alt = "Geeks Image" /> 
-    </div> 
 
+
+
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <img style="width:500px" style="height:250px" src= "{% static "SMP/blog/pics/Inauguration_of_MNNIT.jpg" %}" alt = "Geeks Image">
+        </div>
+
+      </div>
+    </div>
 
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
           <h4 class="pb-4 mb-4 font-italic border-bottom">
-            Campus Tour
+            Message By Our Director Sir
           </h4>
-    
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/CTxW5zpY8zU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         <br><br>
+          <iframe width="400" height="200" src="https://www.youtube.com/embed/Sz6YRpyefpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br><br>
          <h4 class="pb-4 mb-4 font-italic border-bottom">
           Culrav: The Fest
         </h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_Ifnk69C9NE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="400"  height="200" src="https://www.youtube.com/embed/_Ifnk69C9NE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           
         <br><br>
-        <p>All Rights Reserved with Students of MNNIT. ```(0.0)```</p>
-
+          <hr class="featurette-divider">
+        <footer class="container">
+          <p class="float-right"><a href="#">Back to top</a></p>
+          <p>&copy; SMP - MNNIT Allahabad</p>
+        </footer>
     </div><!-- /.blog-main -->
 
     <aside class="col-md-4 blog-sidebar">
@@ -144,13 +150,14 @@
           <li><a href="http://www.mnnit.ac.in/" target="_blank">Official Website</a></li>
           <li><a href="http://academics.mnnit.ac.in/" target="_blank">Academic Portal</a></li>
           <li><a href="http://www.mnnit.ac.in/index.php/admission" target="_blank">Admission Portal</a></li>
-          <li><a href="https://www.facebook.com/MHM.MNNIT/media_set/?set=a.690724138059120" target="_blank">Swagat</a></li>
+          <li><a href="https://www.facebook.com/mentorshipMNNIT" target="_blank">SMP - FB Page</a></li>
           <li><a href="https://www.facebook.com/mnnit.culrav" target="_blank">Culrav</a></li>
           <li><a href="https://www.facebook.com/mnnit.avishkar" target="_blank">Avishkar</a></li>
+           <li><a href="https://www.hack36.com/" target="_blank">Hack 36</a></li>
           <li><a href="https://www.facebook.com/prosangmnnit" target="_blank">Prosang</a></li>
           <li><a href="https://academics.mnnit.ac.in/convocation/" target="_blank">Convocation</a></li>
           <li><a href="https://www.facebook.com/MHM.MNNIT" target="_blank">Media House of MNNIT</a></li>
-          <!-- <li><a href="#">Cafe College Hamara</a></li> -->
+
 
         </ol>
       </div>

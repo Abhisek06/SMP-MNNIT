@@ -22,7 +22,7 @@
         -ms-user-select: none;
         user-select: none;
       }
-
+      .more {display: none;}
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -133,38 +133,36 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    <div class="text-center">
-      <p>Excellence in sports is a direct index of the stature and intellectual maturity of an institute. MNNIT has always aimed to set a precedent for other institutions by laying utmost emphasis on the multifaceted development of its students and pushing them to raise the bar by striving to be ‘Citius, Altius, Fortius’.All the facilities are helmed by seasoned training staff so that even beginners have a beautiful chance to learn the craft and their more experienced counterparts can receive the requisite guidance.
+
+ <div class="container marketing">
+  <div class="row featurette">
+      <div class="life">
+        <h3 class="featurette-heading">About Sports</h3>
+        <p>Excellence in sports is a direct index of the stature and intellectual maturity of an institute. MNNIT has always aimed to set a precedent for other institutions by laying utmost emphasis on the multifaceted development of its students and pushing them to raise the bar by striving to be ‘Citius, Altius, Fortius’.All the facilities are helmed by seasoned training staff so that even beginners have a beautiful chance to learn the craft and their more experienced counterparts can receive the requisite guidance.
       </p>
       <p>You are here for an overall development of your personality, so to keep you healthy and fit, MNNIT has all the facilities for sports, both indoor and outdoor.
-      </p>
+      </p> <span class="dots">...</span><span class="more">
       <p>All outdoor sports like athletics, cricket, football, hockey, basketball, volleyball, etc. and indoor sports like table tennis, weight lifting, chess, carrom etc. are actively played by all throughout the year.
-        Institute organize and promote all extra-curricular activities in the field of sports. It has currently twelve clubs: 
+        Institute organize and promote all extra-curricular activities in the field of sports. It has currently twelve clubs:
         </p>
-        <ul style="list-style: none;">
+       <ul style="list-style: none;">
           <li>Athletics Club</li>
-           <li>Badminton Club</li> 
-           <li>Basketball Club</li> 
-           <li>Cricket Club</li> 
-           <li>Football Club</li> 
-           <li>Hockey Club</li> 
-           <li>Lawn Tennis Club</li>  
-           <li>Table Tennis Club</li> 
-           <li>Volleyball Club</li> 
-           <li>Skating Club</li> 
-           <li>Taekwondo Club</li> 
-           <li>Karate Club</li> 
+           <li>Badminton Club</li>
+           <li>Basketball Club</li>
+           <li>Cricket Club</li>
+           <li>Football Club</li>
+           <li>Hockey Club</li>
+           <li>Lawn Tennis Club</li>
+           <li>Table Tennis Club</li>
+           <li>Volleyball Club</li>
+           <li>Skating Club</li>
+           <li>Taekwondo Club</li>
+           <li>Karate Club</li>
         </ul>
+      </span>
+        <button onclick="myFunction()" class="myBtn">Read more</button>
       </div>
-    
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
+    <br>
 
     <div class="row featurette">
       <div class="col-md-7">
@@ -202,22 +200,50 @@
     </div>
 
     <hr class="featurette-divider">
-
-    <div class="text-center">
-      <p>The probables for the clubs are selected in September and are then subjected to regular coaching almost every evening throughout the year by excellent coaches. From badminton to basketball, you can follow any sport that you love. The SAC grounds are open till 9 P.M. at night and you can issue sports equipment from the security guard at the SAC desk by bringing your I-Card.
+    <div class="row featurette">
+      <div class="life">
+        <p>The probables for the clubs are selected in September and are then subjected to regular coaching almost every evening throughout the year by excellent coaches. From badminton to basketball, you can follow any sport that you love. The SAC grounds are open till 9 P.M. at night and you can issue sports equipment from the security guard at the SAC desk by bringing your I-Card.
       </p>
       <p>MNNIT sports boasts of a rich culture, thriving on immense participation across the institute and the kind of infrastructure most colleges can only dream of.
       </p>
-    </div>
+      </div>
     <hr class="featurette-divider">
 
 
   <!-- FOOTER -->
   <footer class="container">
+     <hr class="featurette-divider">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>&copy; SMP - MNNIT Allahabad</p>
   </footer>
+  </div>
 </main>
+     <script>
+    var allButtons = document.querySelectorAll('.myBtn');
+allButtons.forEach(function(btn){
+  btn.addEventListener('click', myFunction);
+});
+
+function myFunction() {
+  var allBtns = document.querySelectorAll(".myBtn");
+  var allDots = document.querySelectorAll(".dots");
+  var allMore = document.querySelectorAll(".more");
+
+  var btnText = allBtns[[...allBtns].indexOf(this)];
+  var dots = allDots[[...allBtns].indexOf(this)];
+  var moreText = allMore[[...allBtns].indexOf(this)];
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="{% static "SMP/assets/js/vendor/jquery.slim.min.js" %}" ><\/script>')</script><script src="{% static "SMP/assets/dist/js/bootstrap.bundle.js" %}"></script></body>
 </html>

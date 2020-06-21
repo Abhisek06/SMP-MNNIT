@@ -37,52 +37,75 @@
       <a href="../">
         <img src="{% static "SMP/blog/pics/logo.png" %}" alt="Logo" style="float: right;" width="100">
       </a>
-  <h1>Mentors</h1>
-  <p class="lead">Find Your Mentors Family Alloted Here</p>
-  <p>Please maintain the decorum, contact Second Years and don't just move up to Final Year Mentors.</p>
-  <p>Expecting Your Support and Friendly Behavior.
-  <br><br>
-  <hr>
+      {% if year == "4" %}
+        <h1> Contact Faculties for mentorship :) </h1>
+      {% else%}
+        <h1>Mentors</h1>
+        <p class="lead">Find Your Mentors Family Alloted Here</p>
+        <p>Please maintain the decorum, contact Second Years and don't just move up to Final Year Mentors.</p>
+        <p>Expecting Your Support and Friendly Behavior.
+        <br><br>
+        <hr>
 
-  <h2 class="mt-4">Second Year Mentors</h2>
-  <p>Fetch the contact info of your Second Year Mentors to whom you should contact First.</p>
+        <h2 class="mt-4">
+          {% if year == "1" %}
+            Second Year Mentor
+          {%elif year == "2" %}
+            Third Year Mentor
+          {%elif year == "3" %}
+            Your Mentor
+          {%endif%}
 
-  <!-- <div class="row mb-3">
-    <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-    <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-    <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-  </div> -->
+        </h2>
+        <p>Fetch the contact info of your {% if year == "1" %}
+          Second Year Mentor
+        {%elif year == "2" %}
+          Third Year Mentor
+        {%elif year == "3" %}
+          Your Mentor
+        {%endif%} to whom you should contact First.</p>
 
-  <!-- <div class="row mb-3">
-    <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-    <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-    <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-  </div>
+        <!-- <div class="row mb-3">
+          <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+          <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+          <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+        </div> -->
 
-  <div class="row mb-3">
-    <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-    <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-    <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
-  </div> -->
+        <!-- <div class="row mb-3">
+          <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+          <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+          <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+        </div>
 
-  <div style="background-color:burlywood"class="container themed-container"><a class="link1" href="{{ mentor2reg }}/" >{{ mentor2 }}</a></div>
-  <br><hr>
-  </div><br><hr>
-  <div  class="container" id="containers">
-  <h2 class="mt-4">Third Year Mentors</h2>
-  <p>For a more Serious Context, You can contact them, but first approach the former.</p>
-  <div style="background-color:burlywood"class="container themed-container"><a class="link1" href="{{ mentor3reg }}/" >{{ mentor3 }}</a></div><br><hr>
-</div>
-<div class="container" id="containers">
-  <h2 class="mt-4">Final Year Mentors</h2>
-  <p>These are your Mentor Team Head,feel free to contact them only in case of acute emergency</p>
-</div>
-{% for mentor in mentor4 %}
-<div style="background-color: burlywood"class="container themed-container"><a class="link1" href=" finalyear/{{mentor}}/ " > {{ mentor }} </a></div>
-{% endfor %}
-<!-- <div style="background-color: burlywood"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
-<div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
-<div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div> -->
-<br> <p>&copy; SMP - MNNIT </p>
-</body>
-</html>
+        <div class="row mb-3">
+          <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+          <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+          <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
+        </div> -->
+
+        <div style="background-color:burlywood"class="container themed-container"><a class="link1" href="{{ mentor2reg }}/" >{{ mentor2 }}</a></div>
+        <br><hr>
+        </div><br><hr>
+        {% if year == "1" %}
+        <div  class="container" id="containers">
+        <h2 class="mt-4">    
+          Third Year Mentors
+        </h2>
+        <p>For a more Serious Context, You can contact them, but first approach the former.</p>
+        <div style="background-color:burlywood"class="container themed-container"><a class="link1" href="{{ mentor3reg }}/" >{{ mentor3 }}</a></div><br><hr>
+        </div>
+          {%endif%}
+        <div class="container" id="containers">
+          <h2 class="mt-4">Final Year Mentors</h2>
+          <p>These are The Mentor Team Head of your department,feel free to contact them only in case of acute emergency.</p>
+        </div>
+        {% for mentor in mentor4 %}
+        <div style="background-color: burlywood"class="container themed-container"><a class="link1" href=" finalyear/{{mentor}}/ " > {{ mentor }} </a></div>
+        {% endfor %}
+        <!-- <div style="background-color: burlywood"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
+        <div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div>
+        <div style="background-color: burlywood;"class="container themed-container"><a class="link1" href="profile.html" >Final Year</a></div> -->
+        <br> <p>&copy; SMP - MNNIT </p>
+      {%endif%}
+        </body>
+        </html>
