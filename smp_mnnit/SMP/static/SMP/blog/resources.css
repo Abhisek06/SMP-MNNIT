@@ -6,8 +6,9 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
+    background-color: palegoldenrod;
   }
-  
+
   
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
@@ -85,13 +86,13 @@ body {
   
   @media (min-width: 62em) {
     .featurette-heading {
-      margin-top: 7rem;
+      margin-top: 5rem;
     }
   }
   
   .col-md-7{
     background-color: lightseagreen;
-    font-size: 5px;
+    font-size: 14px;
   }
   .lead{
     font-size: 15px;

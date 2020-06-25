@@ -6,6 +6,7 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
+    background-color: palegoldenrod;
   }
   
   
@@ -85,7 +86,7 @@ body {
   
   @media (min-width: 62em) {
     .featurette-heading {
-      margin-top: 7rem;
+      margin-top: 1rem;
     }
   }
   /* .life{
@@ -105,13 +106,16 @@ body {
     background-color: rgb(80, 450, 350);
   }
   .life{
-    background-color: rgb(400, 233,400);
+    background-color: rgb(77, 199, 253);
   }
-  body{
-    background-color:whitesmoke;
-   }
+  
    .image1{
      height: 340px;
      width: 340px;
    }
+
+   .image2{
+    height: 405px;
+    width: 405px;
+  }
 
