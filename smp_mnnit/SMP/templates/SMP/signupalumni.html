@@ -1,0 +1,136 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="SMP, MNNITA">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>login to your Account</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static "SMP/assets/dist/css/bootstrap.css" %}" rel="stylesheet">
+  <link href="{% static "SMP/assets/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="{% static "SMP/blog/login.css" %}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- {% if messages %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Invalid Credentials!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {%endif%} -->
+
+  <div class="container">
+
+    <div>
+    <div class="row row-content">
+      <div class="col-12 col-md-2">
+        <a href="..">
+          <img class="img img-fluid" src="{% static "SMP/blog/pics/logo.png" %}" alt="" width="72" height="72">
+        </a>
+        <h1 class="h3 mb-3 font-weight-normal" style=" font-weight: bold;">Sign Up</h1> 
+      </div>
+      <div class="col-12 col-md-8 offset-md-2">
+        
+        <form method="POST"> {% csrf_token %}
+          <div id="signupform">
+
+
+            <div class="form-group row">
+              <label for="email" class=" col-form-label offset-md-2 col-4 col-md-2">Email</label>
+              <div class="col-8 col-md-6">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="finame" class=" col-form-label offset-md-2 col-4 col-md-2">First Name</label>
+              <div class="col-8 col-md-6">
+                <input type="text" id="finame" name="finame" class="form-control" placeholder="First Name" required
+                  autofocus>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="laname" class=" col-form-label offset-md-2 col-4 col-md-2">Last Name</label>
+              <div class="form-group col-8 col-md-6">
+                <input type="text" id="laname" name="laname" class="form-control" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="passwo" class=" col-form-label offset-md-2 col-4 col-md-2">Password</label>
+              <div class="form-group col-8 col-md-6">
+                <input type="password" id="passwo" name="passwo" class="form-control" placeholder="Password" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="cpasswo" class=" col-form-label offset-md-2 col-4 col-md-2">Check Password</label>
+              <div class="form-group col-8 col-md-6">
+                <input type="password" id="cpasswo" name="cpasswo" class="form-control" placeholder="Check Password"
+                  required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="sfield" class=" col-form-label offset-md-2 col-4 col-md-2">Enter Your Library Field</label>
+              <div class="form-group col-8 col-md-6">
+                <input type="text" id="sfield" name="sfield" class="form-control" placeholder="Enter Library Field"
+                  required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="des" class="scol-form-label offset-md-2 col-4 col-md-2">Achievements</label>
+              <div class="form-group col-8 col-md-6">
+                <textarea name="des" id="des" cols="30" rows="10" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="checkbox mb-3">
+              {% for message in messages %}
+              <div class="alert alert-danger" role="alert">
+                <strong> {{message}} </strong>
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span> -->
+                <!-- </button> -->
+              </div>
+              {%endfor%}
+              <!-- <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label> -->
+            </div>
+            <button class="btn btn-lg btn-primary btn-block offset-md-" type="submit">Sign Up</button>
+            <p class="mt-5 mb-3 text-muted">&copy; SMP-Mnnit Allahabad</p>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

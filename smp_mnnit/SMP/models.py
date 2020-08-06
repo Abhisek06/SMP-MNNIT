@@ -17,6 +17,9 @@ def get_image_path(instance, filename):
 #     def __str__(self):
 #         return self.user.username
 
+class UserA(models.Model):
+    userA = models.OneToOneField(User, on_delete=models.CASCADE)
+    alumni_index = models.BooleanField(default=False)
 class Student(models.Model):                                        # for students
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
@@ -48,3 +51,8 @@ class FinalMentor(models.Model):                                         # for m
     name = models.CharField(max_length = 40, default = "")
     def __str__(self):
         return self.name
+
+class Alumni(models.Model):
+    alumni = models.OneToOneField(UserA, on_delete=models.CASCADE)
+    description = models.TextField()
+    field = models.CharField(max_length=50 )

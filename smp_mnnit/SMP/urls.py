@@ -18,12 +18,16 @@ urlpatterns = [
     path('login/', views.loginbase, name = "loginbase"),
     path('contacts/', views.contacts, name = "contacts"),
     path('details/', views.details, name = "details"), 
-    path('details/<str:usn>/', views.profile, name = "profile"), 
+    path('details/<str:usn>/', views.profile, name = "profile"),
+    path('your_profile/change_password/', views.change_password, name = "change_password"),
     path('details/finalyear/<str:name>/', views.finalprofile, name = "profile4"), 
     path('resources/', views.resources, name = "resources"),
     path('Read_More/', views.readmore, name = "readmore"),
     path('Your_profile/', views.selfdetails, name = "selfdetails"),
     path('logout/', views.logout_request, name = "logout_request"),
     path('data_add/', views.run, name = "run"),
+    path('alumni_signup/', views.signupA, name = "signupA"),
+    path('alumni/', views.alumuni, name = "alumuni"),
+    path('announcements/', views.announce, name = "announce"),
 
 ]

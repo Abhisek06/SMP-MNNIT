@@ -1,13 +1,11 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Poppins:ital@1&display=swap');
 
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
-    background-color: palegoldenrod;
   }
   
   
@@ -97,13 +95,9 @@ body {
   }
   .lead{
     font-size: 15px;
-    /* font-family: "Times New Roman", Times, serif; */
+    font-family: "Times New Roman", Times, serif;
     color: black;
   }
-
-  /* .col-md-7+.col-md-5{
-    margin-left: 2px;
-  } */
 .text-center{
   margin-right: 300px;
   margin-left:300px;
@@ -111,12 +105,4 @@ body {
 .img1{
   width: 420px;
   height: 420px;
-}
-
-
-.lead{
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.outside{
-  font-family: 'Poppins', sans-serif;
 }

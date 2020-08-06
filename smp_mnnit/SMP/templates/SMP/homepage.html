@@ -8,8 +8,11 @@
     <meta name="author" content="SMP, MNNIT ALLAHABAD">
     <title>SMP - MNNIT</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link href="{% static "SMP/assets/dist/css/bootstrap.css" %}" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 
     <style>
       .bd-placeholder-img {
@@ -58,6 +61,7 @@
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 text-center">
         <h1 style="font-size:25px">STUDENT MENTORSHIP PROGRAMME - MNNIT ALLAHABAD</h1>
+        <h6 style="font-size:15px">Office of the Dean (Students Welfare)</h6>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         {% if user.is_authenticated %}
@@ -71,22 +75,26 @@
     </div>
   </header>
 
-      <div class="nav-scroller">
-            <a class="p-2 text-muted"  href="details/">Mentors</a>
-            <a class="p-2 text-muted" href="academics/">Academics</a>
-            <a class="p-2 text-muted" href="campus_life/">Campus Life</a>
-            <a class="p-2 text-muted" href="resources/">Facilities</a>
-            <a class="p-2 text-muted" href="extra_curricular/">Extra-Curricular</a>
-            <a class="p-2 text-muted" href="FAQ/">FAQ'S</a>
-             <a class="p-2 text-muted" href="contacts/">Contact Us</a>
+      <!-- <div class="nav-scroller py-1 mb-2 "> -->
+            <nav class="nav nav_d_flex_justify-content-between">
+            <a class="nav-link p-2 text-muted"  href="details/">Mentors</a>
+            <a class="nav-link p-2 text-muted"  href="alumni/">Our Alumunus</a>
+            <a class="nav-link p-2 text-muted" href="academics/">Academics</a>
+            <a class="nav-link p-2 text-muted" href="campus_life/">Campus Life</a>
+            <a class="nav-link p-2 text-muted" href="resources/">Facilities</a>
+            <a class="nav-link p-2 text-muted" href="extra_curricular/">Extra-Curricular</a>
+            <a class="nav-link p-2 text-muted" href="FAQ/">FAQ'S</a>
+            <a class="nav-link p-2 text-muted" href="announcements/">Announcements</a>
+            <a class="nav-link p-2 text-muted" href="contacts/">Contact Us</a>
 
-      </div>
+            </nav>
+      <!-- </div> -->
  <hr class="featurette-divider">
 
   <div id="continue-read" class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
       <h1 class="display-4 font-italic">Welcome to MNNIT Allahabad</h1>
-      <p class="lead my-3" style="font-family: 'Caveat', cursive;">This website has been made to introduce incoming freshers to the life at MNNIT Allahabad.
+      <p class="lead my-3">This website has been made to introduce incoming freshers to the life at MNNIT Allahabad.
         Explore this website and use it to make an informed choice about your college and department.
         You won't feel leftout on this platform. Have fun!</p>
       <p class="lead mb-0"><a href="Read_More/" class="text-white font-weight-bold">Continue reading...</a></p>
@@ -133,16 +141,27 @@
           
         <br><br>
           <hr class="featurette-divider">
-        <footer class="container">
+        <!-- <footer class="container">
           <p class="float-right"><a href="#">Back to top</a></p>
           <p>&copy; SMP - MNNIT Allahabad</p>
-        </footer>
+        </footer> -->
     </div><!-- /.blog-main -->
 
     <aside class="col-md-4 blog-sidebar">
       <div class="p-4 mb-3 bg-light rounded">
-        <h4 class="font-italic">Advice 404</h4>
-        <p class="mb-0"><em>Enjoy your college life to the fullest. We are standing always with you.</em> Bon Voyage.</p>
+        <h4 class="font-italic">Announcements</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="announce/">Click Here to Know More...</a></li>
+          <!-- <li><a href="http://academics.mnnit.ac.in/" target="_blank">Academic Portal</a></li>
+          <li><a href="http://www.mnnit.ac.in/index.php/admission" target="_blank">Admission Portal</a></li>
+          <li><a href="https://www.facebook.com/mentorshipMNNIT" target="_blank">SMP - FB Page</a></li>
+          <li><a href="https://www.facebook.com/mnnit.culrav" target="_blank">Culrav</a></li>
+          <li><a href="https://www.facebook.com/mnnit.avishkar" target="_blank">Avishkar</a></li>
+           <li><a href="https://www.hack36.com/" target="_blank">Hack 36</a></li>
+          <li><a href="https://www.facebook.com/prosangmnnit" target="_blank">Prosang</a></li>
+          <li><a href="https://academics.mnnit.ac.in/convocation/" target="_blank">Convocation</a></li>
+          <li><a href="https://www.facebook.com/MHM.MNNIT" target="_blank">Media House of MNNIT</a></li> -->
+        </ol>
       </div>
 
       <div class="p-4">
@@ -175,6 +194,10 @@
   </div><!-- /.row -->
 
 </main><!-- /.container -->
+<footer class="container">
+  <p class="float-right"><a href="#">Back to top</a></p>
+  <p>&copy; SMP - MNNIT Allahabad</p>
+</footer>
 
 </body>
 </html>
