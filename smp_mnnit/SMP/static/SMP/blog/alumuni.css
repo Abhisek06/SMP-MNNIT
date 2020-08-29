@@ -5,6 +5,7 @@ body {
 
 body {
   padding-top: 56px;
+  margin-top: 5px;
 }
 
 @media (max-width: 991.98px) {
@@ -76,8 +77,9 @@ body {
 .lh-150 { line-height: 1.5; }
 .hulu{
   background-image: url("pics/uk2.jpg");
+  background-color: rgba(220, 20, 60, 0.63);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-position: center;
-  background-size: cover;
+  background-size: inherit;
 }
