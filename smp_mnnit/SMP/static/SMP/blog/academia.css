@@ -24,7 +24,10 @@ body {
   
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 42rem;
+    height: 36rem;
+  }
+  .carousel-item .d-block{
+    height: 32rem;
   }
   .carousel-item > img {
     position: absolute;
@@ -85,7 +88,7 @@ body {
   
   @media (min-width: 62em) {
     .featurette-heading {
-      margin-top: 7rem;
+      margin-top: 2rem;
     }
   }
   /* .life{
@@ -111,7 +114,7 @@ body {
     background-color:whitesmoke;
    }
    .image1{
-     height: 340px;
-     width: 340px;
+     height: 420px;
+     width: 420px;
    }
 
