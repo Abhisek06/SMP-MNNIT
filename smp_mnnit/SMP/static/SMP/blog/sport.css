@@ -24,7 +24,7 @@ body {
   
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 42rem;
+    height: 36rem;
   }
   .carousel-item > img {
     position: absolute;
@@ -85,7 +85,7 @@ body {
   
   @media (min-width: 62em) {
     .featurette-heading {
-      margin-top: 7rem;
+      margin-top: 2rem;
     }
   }
   

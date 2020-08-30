@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
-from django.conf.urls.static import static
 
 app_name = 'SMP'
 
@@ -26,8 +25,9 @@ urlpatterns = [
     path('details/<str:usn>/', views.profile, name = "profile"), 
     path('details/finalyear/<str:name>/', views.finalprofile, name = "profile4"), 
     path('resources/', views.resources, name = "resources"),
-    path('Read_More/', views.readmore1, name = "readmore1"),
+    path('Read_More/', views.readmore, name = "readmore"),
     path('Your_profile/', views.selfdetails, name = "selfdetails"),
     path('logout/', views.logout_request, name = "logout_request"),
+    path('data_add/', views.run, name = "run"),
 
 ]

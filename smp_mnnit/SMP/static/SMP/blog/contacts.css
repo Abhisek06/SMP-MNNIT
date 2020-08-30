@@ -40,7 +40,15 @@ td {
   /* padding: 5px; */
 }
 
-
+.developer{
+  position: absolute;
+  bottom: 0;
+  align-content: center;
+  text-align: center;
+}
+table{
+  background-color: aliceblue;
+}
 
 body {
     background-image: url(pics/contact.jpg);
@@ -49,6 +57,7 @@ body {
   max-height: 100%;
   background-repeat: no-repeat;
   background-attachment: inherit;
+  background-size: cover;
   background-position: center;
   width: auto;
   height: auto;

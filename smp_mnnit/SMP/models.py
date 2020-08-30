@@ -1,21 +1,35 @@
 from django.db import models
 from django.contrib.auth.models import User
+# from . import imported
 
 def get_image_path(instance, filename):
      return 'images/{0}/{1}'.format(instance.username, filename)     # define image upload path
 
 # Create your models here.
+# class User(models.Model):                                        # for students
+
+#     username = models.CharField(max_length = 20,default = "")
+#     password = models.PasswordField(max_length = 30, default = "")
+#     first_name = models.CharField(default = "", max_length = 20)
+#     last_name= models.CharField(max_length = 20, default = "")
+#     email = models.CharField(max_length = 50, default = "")         # year of student
+
+#     def __str__(self):
+#         return self.user.username
+class UserA(models.Model):
+    user = models.OneToOneField(User, on_delete= models.CASCADE)
+    Alumni_index = models.BooleanField(default = False)
 
 class Student(models.Model):                                        # for students
 
-    user = models.OneToOneField(User, on_delete = models.CASCADE)
+    user = models.OneToOneField(UserA, on_delete = models.CASCADE)
     mentor_name = models.CharField(max_length = 30)
     mentor_regn = models.CharField(default = "", max_length = 10)
     branch = models.CharField(max_length = 40)
     syear = models.CharField(max_length = 10, default = "")         # year of student
 
     def __str__(self):
-        return self.user.username
+        return self.userA.user.username
 
 class Mentor(models.Model):                                         # for mentors
 
@@ -25,7 +39,7 @@ class Mentor(models.Model):                                         # for mentor
     contactn = models.CharField(max_length = 15, default = "")
 
     def __str__(self):
-        return self.mentor.user.username
+        return self.mentor.userA.user.username
 
 class FinalMentor(models.Model):                                         # for mentors
 
@@ -37,3 +51,7 @@ class FinalMentor(models.Model):                                         # for m
     name = models.CharField(max_length = 40, default = "")
     def __str__(self):
         return self.name
+
+class Alumni(models.Model):
+    alumniA = models.OneToOneField(UserA, models.CASCADE)
+    description = models.TextField(default="")
