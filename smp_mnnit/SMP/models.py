@@ -16,20 +16,20 @@ def get_image_path(instance, filename):
 
 #     def __str__(self):
 #         return self.user.username
-class UserA(models.Model):
-    user = models.OneToOneField(User, on_delete= models.CASCADE)
-    Alumni_index = models.BooleanField(default = False)
 
+class UserA(models.Model):
+    userA = models.OneToOneField(User, on_delete=models.CASCADE)
+    alumni_index = models.BooleanField(default=False)
 class Student(models.Model):                                        # for students
 
-    user = models.OneToOneField(UserA, on_delete = models.CASCADE)
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
     mentor_name = models.CharField(max_length = 30)
     mentor_regn = models.CharField(default = "", max_length = 10)
     branch = models.CharField(max_length = 40)
     syear = models.CharField(max_length = 10, default = "")         # year of student
 
     def __str__(self):
-        return self.userA.user.username
+        return self.user.username
 
 class Mentor(models.Model):                                         # for mentors
 
@@ -39,7 +39,7 @@ class Mentor(models.Model):                                         # for mentor
     contactn = models.CharField(max_length = 15, default = "")
 
     def __str__(self):
-        return self.mentor.userA.user.username
+        return self.mentor.user.username
 
 class FinalMentor(models.Model):                                         # for mentors
 
@@ -53,5 +53,6 @@ class FinalMentor(models.Model):                                         # for m
         return self.name
 
 class Alumni(models.Model):
-    alumniA = models.OneToOneField(UserA, models.CASCADE)
-    description = models.TextField(default="")
+    alumni = models.OneToOneField(UserA, on_delete=models.CASCADE)
+    description = models.TextField()
+    field = models.CharField(max_length=50 )

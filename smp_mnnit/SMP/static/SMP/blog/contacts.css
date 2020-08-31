@@ -51,7 +51,8 @@ table{
 }
 
 body {
-    background-image: url(pics/contact.jpg);
+    /* background-image: url(pics/contact.jpg); */
+    background-color:cornsilk;
   min-height: 100%;
   max-width: 100%;
   max-height: 100%;
@@ -68,7 +69,8 @@ body {
   right: 0;
   margin: auto;
   color: whitesmoke;
-
+  margin-left: auto;
+  margin-right: auto;
     /* Size limit */
     max-width: 100%;
     max-height: 100%;

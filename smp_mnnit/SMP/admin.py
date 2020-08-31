@@ -1,6 +1,6 @@
 from import_export.admin import ImportExportModelAdmin
 from django.contrib import admin
-from .models import Student, Mentor, FinalMentor
+from .models import Student, Mentor, FinalMentor, Alumni, UserA
 from django.contrib.auth.models import User
 # import auth.PersonAdmin
 
@@ -15,7 +15,21 @@ class PersonAdmin(ImportExportModelAdmin):
 # @admin.register(User)
 # class PersonAdmin(ImportExportModelAdmin):
 #     pass
+@admin.register(UserA)
+class PersonAdmin(ImportExportModelAdmin):
+    pass
+@admin.register(Alumni)
+class PersonAdmin(ImportExportModelAdmin):
+    pass
+@admin.register(FinalMentor)
+class PersonAdmin(ImportExportModelAdmin):
+    pass
+
+
+
+
+
 
 # admin.site.register(Student)
 # admin.site.register(Mentor)
-admin.site.register(FinalMentor)
+# admin.site.register(FinalMentor)

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Student, Mentor, FinalMentor
+from .models import Student, Mentor, FinalMentor, UserA, Alumni
 from django.contrib import messages
 import csv
 from django.contrib.auth.decorators import user_passes_test
@@ -29,6 +29,35 @@ def loginbase(request):
     
     return render(request, "SMP/signin.html")
 
+def signupA(request):
+    if request.user.is_authenticated:
+        return redirect("SMP:details")
+    if request.method == "POST":
+        mail = request.POST.get("email", "")
+        firname = request.POST.get("finame", "")
+        lasname = request.POST.get("laname", "")
+        passwor = request.POST.get("passwo", "")
+        cpasswor = request.POST.get("cpasswo", "")
+        desc = request.POST.get("des", "")
+        selfield = request.POST.get("sfield", "")
+
+        if passwor == cpasswor:
+            p, created = User.objects.get_or_create(username=mail, first_name=firname, last_name=lasname, email=mail)
+            p.set_password(passwor)
+            p.save()
+
+            pA, create = UserA.objects.get_or_create(userA = p, alumni_index=True)
+            pA.save()
+            alum, creating = Alumni.objects.get_or_create(alumni = pA, description=desc, field=selfield)
+            alum.save()
+            return redirect("SMP:home")
+
+        else:
+            messages.info(request, 'Password didn\'t Match')   
+            return redirect("SMP:signupA")
+
+    return render(request, 'SMP/signupalumni.html')
+
 def contacts(request):
     return render(request, 'SMP/contact.html')
 
@@ -37,6 +66,12 @@ def events(request):
 
 def academics(request):
     return render(request, 'SMP/academics.html')
+
+def alumuni(request):
+    return render(request, 'SMP/alumuni.html')
+
+def announce(request):
+    return render(request, 'SMP/announce.html')
 
 def campus_life(request):
     return render(request, 'SMP/infra.html')
@@ -50,13 +85,11 @@ def FAQ(request):
 def details(request):
     if request.user.is_authenticated:
         us = request.user
-        usA = UserA.objects.get(user = us)
-        stu = Student.objects.get(userA = usA)
+        stu = Student.objects.get(user = us)
         m2n = stu.mentor_name                                            # year+1 mentor name
         m2reg = stu.mentor_regn                                          # year+1 mentor registration number
         mentor2ndus = User.objects.get(username = m2reg)                  # year+1 mentor from users
-        mentor2ndusA = UserA.objects.get(user = mentor2ndus)                  # year+1 mentor from users
-        mentor2nd = Student.objects.get(userA = mentor2ndusA)              # year+1 mentor from students
+        mentor2nd = Student.objects.get(user = mentor2ndus)              # year+1 mentor from students
         m3n = mentor2nd.mentor_name                                            # year+2 mentor name
         m3reg = mentor2nd.mentor_regn                                          # year+2 mentor registration number
         branchm = stu.branch
@@ -70,32 +103,19 @@ def details(request):
 def clubs(request):
     return render(request,"SMP/clubs.html")
 
-def announce(request):
-    return render(request,"SMP/announce.html")
-
 def resources(request):
     return render(request,"SMP/resources.html")
-
-def alumuni(request):
-    return render(request,"SMP/alumuni.html")
-
-def alumprofile(request):
-    return render(request,"SMP/alumprofile.html")
-
-def alumnilist(request):
-    return render(request,"SMP/alumnilist.html")
 
 def logout_request(request):
     logout(request)
     return redirect("SMP:loginbase")
     
 def readmore(request):
-    return render(request, 'SMP/readMore1.html')
+    return render(request, 'SMP/readMore.html')
 
 def profile(request, usn):
     usnm = User.objects.get(username = usn)
-    usnmA = UserA.objects.get(user = usn)
-    stud = Student.objects.get(userA = usnm)
+    stud = Student.objects.get(user = usnm)
     ment = Mentor.objects.get(mentor = stud)
     roomno = ment.roomn
     contactno = ment.contactn
@@ -118,11 +138,28 @@ def finalprofile(request, name):
 def sports(request):
     return render(request, 'SMP/sports.html')
 
+# def change_password(request,user):
+#     if user.is_authenticated():
+#         loguser = request.user
+#         # curpass = loguser.password
+#         if request.method == "POST":
+#             npassword = request.POST.get('npass', "")
+#             cnpassword = request.POST.get('cnpass', "")
+#             if npassword == cnpassword:
+#                 loguser.set_password(npassword)
+#                 loguser.save()
+#                 return redirect('SMP:selfdetails')
+#             else:
+#                 messages.info(request, 'Passwords didn\'t match!')
+#                 return redirect('SMP:change_password')
+#         return render(request,'SMP/changepassword.html')
+#     else:
+#         return redirect('SMP:loginbase')
+
 def selfdetails(request):
     usn = request.user
     usnm = User.objects.get(username = usn)
-    usnmA = UserA.objects.get(user = usn)
-    stud = Student.objects.get(userA = usnm)
+    stud = Student.objects.get(user = usnm)
     # ment = Mentor.objects.get(mentor = stud)
     # roomno = ment.roomn
     # contactno = ment.contactn
