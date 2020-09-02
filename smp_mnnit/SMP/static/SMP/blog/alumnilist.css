@@ -1,0 +1,29 @@
+.themed-grid-col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(86, 61, 124, .15);
+    border: 1px solid rgba(86, 61, 124, .2);
+  }
+  
+  .themed-container {
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 123, 255, .15);
+    border: 1px solid rgba(0, 123, 255, .2);
+  }
+ body{
+   background-image: url(pics/mentors.jpeg);
+   color: blanchedalmond;
+   background-repeat: no-repeat;
+   background-attachment: inherit;
+   background-position: center;
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   font-family: "Times New Roman", Times, serif;
+ }
+ .link1{
+   color: white;
+   font-family: "Times New Roman", Times, serif;
+   font:1000;
+ }

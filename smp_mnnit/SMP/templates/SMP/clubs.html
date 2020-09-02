@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Shradhey Pathak,MNNIT Allahabad">
+    <title>Clubs - SMP</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+<link href={% static "/SMP/assets/dist/css/bootstrap.css"%} rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href={% static "SMP/blog/club.css"%} rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="../extra_curricular">Back To Extras</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../events">Events</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../sports">Sports</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+      </ul>
+      <!-- <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+
+    <div id="myCarousel" class="carousel slide d-block d-md-block" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/culrav.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Culrav : Annual Cultural Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/avish5.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Avishkar : Annual Techno Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/avishkar.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Prosang : Annual Robo And Aero Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/josh.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Josh : Annual Sports Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/eloquence.jpeg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Eloquence : Annual Literary Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+              </div>
+            </div>
+          </div>
+      </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <hr class="featurette-divider">
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+<div class="text-center" style="background-color: rgb(121, 233,233);"><h3><strong>Clubs Of MNNIT</strong></h3>
+  <ul style="list-style:none">
+  <li><a href="#cc">Computer Coding Club</a></li>
+   <li><a href="#literary">MNNIT Literary Club</a></li>
+   <li><a href="#energy">Energy Club</a></li>
+   <li><a href="#quiz">Gnosis Quiz Club</a></li>
+   <li><a href="#robotics">Robotics Club</a></li>
+   <li><a href="#anokhi">Anokhi Pehel</a></li>
+   <li><a href="#ecell">E - Cell</a></li>
+   <li><a href="#green">Green Club</a></li>
+   <li><a href="#rotaract">Rotaract Club</a></li>
+   <li><a href="#athletics">MNNIT Athletics Club</a></li>
+   <li><a href="#sae">MNNIT SAE Club</a></li>
+   <li><a href="#msme">MSME Club</a></li>
+   <li><a href="#aero">Aero Modelling Club</a></li>
+   <li><a href="#enactus">Enactus Club</a></li>
+   <li><a href="#astronomy">Astronomy Club</a></li>
+   <li><a href="#dance">Dance Club</a></li>
+   <li><a href="#mhm">Media House Of MNNIT</a></li>
+   <li><a href="#drams">Dramatics Club</a></li>
+   <li><a href="#electronics">Electronics Society</a></li>
+  </ul>
+</div>
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <p id="cc"></p>
+          <h2 class="featurette-heading">Computer Coding Club</h2>
+          <!-- <p class="lead">Dance club, one of the official club, is the most fascinating and glamorous clubs of MNNIT with maximal audience participation. To drive your interest into this charismatic club we have duo dance, group dance events throughout the year. This club assures the audience that the dance performances will leave them flabbergasted. The main event Razzmatazz during the annual cultural fest, CULRAV attract umpteen people. Swagat, the annual fresher’s event which is organized at the starting of the academic year is a platform for freshers to unveil their outstanding skills and passion to be a virtuoso dancer. This year club plan to organize dance workshops for freshers as well as an event wherein freshers can show cast their talent. </p> -->
+          <p class="lead">Coding Club is one of the biggest clubs of MNNIT. As a part of the Institute Technical Council, this club aims at providing a gateway for the people of the institute to join the coding Community. It creates a platform which allows students to gain assistance and mentorship to enhance their coding ability.It aims at propagating the enthusiasm for coding in the institute and especially amongst freshmen. This club believe that every student of MNNIT should have an opportunity to learn how to code and develop a passion for it.
+            Club conducts sessions and workshops, hold lectures and talks, and even host coding competitions and hackathons. There is something for everyone. Whether you want to learn, participate in hackathons and win big prizes, or prepare for the Hack-36 and GSoC, you can do it all here. </p>
+          <!-- <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
+             <a  class="lead" target="_blank" href="https://www.facebook.com/nishaadmnnit/">Click here to know more</a>
+          </p> -->
+        <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+        <a class="lead" target="_blank" href="https://www.facebook.com/groups/ccqueries/">Click here to know more</a>
+      <p id="cc"></p>
+      </div>
+        <div class="col-md-5">
+          <img src={% static "SMP/blog/club/cc.jpg"%} alt="cc" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <p id="energy"></p>
+        <h2  class="featurette-heading">Energy Club</h2>
+        <p class="lead">Energy club, a great initiative by Electrical branch of MNNIT which was founded in 2018 aims at promoting renewable energy resources. Currently, working on 10-15 astonishing projects that aim to FUSE technology with energy saving. Dr.Dipayan Guha, has given MNNIT some astonishing projects such as home automation, three phase invertor and BLDC motor control. This club is all set to organize an Energy Club Exhibition for 2nd and 3rd year B. Tech students in future which will take this initiative to a whole new level.
+        </p>
+        <!-- <p class="lead">Having the theme ‘ideate, innovate and create’, the fest has around 60 events being organised over the period of four days. There are over 12 major banners under which whole Avishkar takes place into account. It includes Aerodynamics, Cyberquest, Mechrocosm, Electromania, Power Surge, Genesis, Rasayans, Nirman, Oligopoly, Kreedomania, Monopoly and Robomania. 
+        </p>
+        <p class="lead">Every year Avishkar occurs at mid-September which witnesses a huge participation from all branches and years. Avishkar’ 19 marked a huge success all it had a team of dedicated students, who worked day and night passionately. From self-driving cars which can follow lanes and identify road signals to creating ‘Vikram’ lander inspired ATVs for different types of terrains on moon, form google assistant based home automation to creating your own android app Avishkar keeps on raising the bar year after year.
+        </p> -->
+        <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+        <a  class="lead" target="_blank" href="https://www.facebook.com/energyclubmnnit/">Click here to know more</a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src={% static "SMP/blog/club/energy.png"%} alt="energy" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <p id="quiz"></p>
+        <h2 class="featurette-heading">Gnosis Quiz Club</h2>
+        <p class="lead">Gnosis derived from Ancient Greek, translates to having special knowledge of spiritual mysteries. The Quiz club, founded in 2011, is one of the most active clubs of the institute with a plethora of quizzes covering enormous varieties of genres. The club organises SAC quizzes once in a week. The club also organises ‘Gnosiomania’, the quizzing event held during Avishkar (the tech-fest of MNNIT) which hosts quizmasters and quizzers from all over India. Many of the alumnus who were once the part of this club have made MNNIT proud at National Level Quizzing like Tata Crucible Campus Quiz, SBI Numero YONO Quiz etc. The genres of quizzes range from Mela, General, India, Bollywood, Sports to Sci-Biz Tech, pop-culture and many more. The genres of quizzes seem to stretch far and thus, no stones are left unturned.
+            </p>
+        <!-- <p class="lead"><strong> Razzmatazz</strong> where various dance teams from different colleges compete to win the title being judged by the top dancers every year.</p>
+        <p class="lead"><strong> Rangmanch and Parimal</strong> an umbrella event for all Hindi literary events</p>
+        <p class="lead"><strong> Kavya Sandhya</strong> the inaugural flagship poetry night of Culrav which attracts connoisseurs of poetry, showcasing their talent judged by eminent personalities.
+        </p>
+        <p class="lead"><strong> Celebrity and Pro-nites </strong>the last two nights of Culrav witnesses thrilling performances from famous celebrities and artists in the fields of rock, hip-hop or EDM.
+        </p>
+        <p class="lead"><strong> Spandan </strong>which witnesses the charming glamourous ramp walks.
+        </p>
+        <p class="lead"><strong> Informal Events </strong>from "Stand-up Comedy" to "Googly Cricket" it has a wide variety of events in this arena, to enthral the audiences all the time wherein they stand a chance to win lots of goodies and merchandise.
+        </p>
+        <p class="lead"><strong> Stunt Show </strong>being hosted by Hero Moto Corp has gathered huge amount of audience last year.
+        </p> -->
+        
+        <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+        <a  class="lead" target="_blank" href="https://www.facebook.com/gnosismnnit/">Click here to know more</a>
+      </div>
+      <div class="col-md-5">
+        <img src={% static "SMP/blog/club/gnosis.jpg"%} alt="Gno" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <p id="robotics"></p>
+          <h2 class="featurette-heading">Robotics Club</h2>
+          <p class="lead">If you have ever even secretly aspired to build your own robot, then the Robotics Club, MNNIT is the place for you! MNNIT has diverse group of over-enthused robotics nerds who find roots across all academic departments of the institute. The club is a student body which finds its place under the Science and Technology Council. It provides one on one guidance, workshops and tutorials along with tools, equipments, components and workspaces which eagerly await you.
+          </p>
+          <p class="lead"> 
+            Robotics Club MNNIT was formed out of the passion for robotics, to facilitate learning and research in the areas of Mechatronics/robotics and Intelligent Systems, Automation, Advanced Control Systems, Modelling and Simulation, and Sensors & Algorithms. This aims at acquiring knowledge and appropriate hands-on experience, in order to meet the needs of these rapidly changing technologies and provide services to industry for promoting new technologies as well as designing and manufacturing commercially viable products, for the development of our country. 
+             </p>
+          <p class="lead">Robotics club also hosts multiple events in Avishkar such as Daksha, Mind the path and Mind the traffic.
+          </p>
+        <!-- <p class="lead">Eloquence is a wholesome experience for the literary enthusiasts to express themselves. -->
+        <!-- </p> -->
+        <a  class="lead" target="_blank" href="https://www.facebook.com/avishkar.robotics/">Click here to know more</a>
+          <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src={% static "SMP/blog/club/robotics.jpg"%} alt="robo" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+
+
+      <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <p id=id="anokhi"></p>
+        <h2 class="featurette-heading">Anokhi Pehel</h2>
+        <p class="lead">Anokhi Pehel is a non-profitable organisation initiated by the group of students who share common motive of helping underprivileged students. This club is initiated by Kanad Kr. Amar and his friends (2020 batch). Three years back, they came up with the idea of “each one teach one”. And laid the foundation of this club which has now more than 400 members. A large number of students from all courses and streams are volunteering to teach the less privileged students. The managing and teaching team of the organisation is aimed at bringing students from their homes, teaching them in evening and then dropping them back at their homes.
+          This club organises “Antyodaya” (annual celebratory fest) in which these students participate in different competitions of cultural, academic and sports interest to build their personality as a whole.
+           </p>
+        <!-- <p class="lead">E-Cell helps host Renaissance. This summit includes various events such as E-Talk, E-Plan, Biz-quiz, Panel Discussion, IPL Auction, Stock Market and many more.
+        </p>
+        <p class="lead">Renaissance also intends to bring together technologists, engineers, medical professionals, business analysts to develop all-inclusive innovation that creates an impact on the quality of life through talks, discussions and workshops.
+        </p> -->
+      <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+      <a  class="lead" target="_blank" href="https://www.facebook.com/anokhipehel/">Click here to know more</a>
+    </div>
+      <div class="col-md-5">
+        <img src={% static "SMP/blog/club/anokhi.jpg"%} alt="anokhi" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <p id="ecell"></p>
+          <h2 class="featurette-heading">E - Cell</h2>
+          <p class="lead">MNNIT Entrepreneurship Cell is MNNIT's official student-run institute body that aims to encourage and aid the students for innovation & entrepreneurship.
+          </p>
+          <p class="lead"> E-Cell helps host the annual entrepreneurship event – “Renaissance”, established back in 2014, under Design and Innovative Centre. The club is full of vibrant, dynamic and hard-working students. E-Cell team is one that instils the zeal of an entrepreneur in each and every one of its members, making them job creators rather than job-seekers. E-Cell also helped organize TED Talks in college premises.
+          </p>
+           <!-- <p class="lead">Prosang with an array of exciting events allows to have fun while simultaneously learning amongst brilliant minds from around the country!  -->
+        </p>  -->
+        <a  class="lead" target="_blank" href="https://www.facebook.com/mnnitecell/">Click here to know more</a>
+       </div>
+        <div class="col-md-5 order-md-1">
+          <img src={% static "SMP/blog/club/ecell.jpg"%} alt="e" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <p id="green"></p>
+          <h2 class="featurette-heading">Green Club</h2>
+          <p class="lead">MNNIT Green Club is founded by Ashish Jaiswal and his friends (2021 batch).
+            The club was inaugurated by the honourable president of India, Ramnath Kovind Ji on 15 Dec 2017. They planted around 1000 plants all over the campus on different occasions. Till now, nearly 3000 planted have been planted by this club. During summer times, they arranged almost 200 water pots for birds all across the campus, under the supervision of official in-charge.
+            </p>
+          <p class="lead">As a part of Green Club initiative, students are now advised to bring water bottles during the exam. In addition, instead of plastic cups, recyclable paper cups are being used during the exam time to stop the usage of plastic in the campus.
+          </p>
+          <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
+
+          </p>
+          <a  class="lead" target="_blank" href="https://www.facebook.com/MNNITGreenClub/">Click here to know more</a>   
+
+        <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+        </div>
+        <div class="col-md-5">
+          <img src={% static "SMP/blog/club/green.jpg"%} alt="green" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <p id="rotaract"></p>
+          <h2 class="featurette-heading">Rotaract Club</h2>
+          <p class="lead">Rotaract is a network of friendship engagement and action that spans 167 countries. Rotaract clubs are part of a global effort to bring peace and international understanding to the world. The purpose of Rotaract is to provide an opportunity for young men and women to enhance the knowledge and skills to address physical and social needs of the communities. Rotaract Club is one of the most prominent clubs of MNNIT. The members of this club teach the underprivileged students of Bal Bharti School under the initiative “DISHA”.
+          </p>
+          <p class="lead">Extracurricular activities are also being organised which helps to overall development of these students.
+        </p>
+        <p class="lead">Cloth Donation Drives are also an important initiative carried out by this club.
+        </p>
+        <p class="lead">They collect blankets, woollen clothes from the college students and nearby areas and distribute them to needy in winters.
+        </p>
+        <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+        </p>
+        <a class="lead" target="_blank" href="https://www.facebook.com/rotaractmnnit/">Click here to know more</a>   
+
+       </div>
+        <div class="col-md-5 order-md-1">
+          <img src={% static "SMP/blog/club/rotoract.jpg"%} alt="ro" class="img6 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <p id="literary"></p>
+          <h2 class="featurette-heading">MNNIT Literary Club</h2>
+          <p id="literary"class="lead">MNNIT, Literary club is a club where students discover their hidden literary talents and step out of their shell. A club which unhides your creativity and allows you to showcase your talent in best way possible. The club provide ample of opportunities to writers, orators and debaters. From MUN, parliamentary debate, MIP to poetry slam, storytelling, the club organises enormous such activities throughout the year. Literary club has proved itself in many IITs and NITs. This club played a major role in bagging up overall championship trophy in SPRINGFEST 2019 and 2020(Cultural fest of IIT KGP).
+          </p>
+          <!-- <p class="lead">This is very first event of college when you start your college life here at MNNIT. It is an event which acts as a platform for the newly inducted students to exhibit their extra-curricular talents. Besides it also facilitates better co-ordination and communication between the freshers and the senior students. It is purely an event dedicated to students, hence right from the selection of the events to the management of the function, the responsibility is being borne by senior students in the form of a committee of student co-ordinators.
+          </p>
+          <p class="lead">There are 14 committees that make this event a grand success. This ranges from dainty dances like Garba, Marathi, Bengali, SouthFolk, Bhangra, Rajasthani, Inaugural and Western to the charming ramp walks of the footprints committee and from the extraordinary talent of the dramatics committee to the technical upbringing of Media House of MNNIT. The Arts committee brightens the stage with a outstanding back drop painted by vibrant colours. The Music committee which sets the stage on fire with their melodious and enchanting performances. The Oration committee which lefts the audience awestruck with their affluent skills.
+          </p> -->
+          <a class="lead" target="_blank" href="https://www.facebook.com/MNNITLitClub/">Click here to know more</a>
+        </div>
+        <div class="col-md-5">
+          <img src={% static "SMP/blog/club/literery.jpg"%} alt="Lit" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <p  id="sae"></p>
+            <h2 class="featurette-heading">MNNIT SAE Club</h2>
+            <p class="lead">Society of Automotive Engineers (SAE) is the global society for all the automobile engineering enthusiasts. As MNNIT is a part of its collegiate society, it participates in all the three mega events: SAE-BAGA, a national level event design; SAE-SUPRA, a self-made car racing event; and SAE-EFFICYCLE, the event for three wheeled electric or self-paddled tricycle.
+              A green bike made by MNNIT students has hit the campus road which uses the e-bike recovery system. The students have also made a GO-KART for an event in March 2020.
+               </p>
+            <!-- <p class="lead">Extracurricular activities are also being organised which helps to overall development of these students.
+          </p>
+          <p class="lead">Cloth Donation Drives are also an important initiative carried out by this club.
+          </p>
+          <p class="lead">They collect blankets, woollen clothes from the college students and nearby areas and distribute them to needy in winters.
+          </p>
+          <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+          </p> -->
+          <a class="lead" target="_blank" href="https://www.facebook.com/SAEMNNITCLUB/">Click here to know more</a>   
+         </div>
+          <div class="col-md-5 order-md-1">
+            <img src={% static "SMP/blog/club/sae.jpg"%} alt="sae" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+          </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <p id="msme"></p>
+            <h2 class="featurette-heading">MSME Club</h2>
+            <p id="msme"class="lead">MNNIT Society of mechanical engineers (MSME) is the club run by final year students of Mechanical and Production and Industrial engineering branch. It provides extra classes to hone the soft skills for the first, second- and third-year students along with preparing for the doom’s day with mock GD’s and mock interviews.
+              These have both technical and non-technical topics to ensure holistic preparation of the students as they shed their fear and work their way up the ladder. It can be seen as two-way benefit proposition-seniors get to polish their skills while teaching juniors get wonderful peer-to-peer learning. It’s a win-win for one and all.
+                          </p>
+                         
+            <!-- <p class="lead">‘Sky is the limit’ a sentence engraved on the mind of each of the athletes. A proper amalgamation of coordination and support among the teammates make the troupe stand apart from others.
+            </p>
+            <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”. -->
+  
+            </p>
+          <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+          </div>
+          <div class="col-md-5">
+            <img src={% static "SMP/blog/club/msme.jpg"%} alt="msme" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <p id="aero" ></p>
+              <h2 class="featurette-heading">Aero Modelling Club</h2>
+              <p class="lead">"If you were born without wings, do nothing to prevent them from growing."
+                Ever wondered what makes stuff airborne? Ever harboured a dream to sail to the tune of the winds?
+                  </p>
+              <p class="lead">Aeromodelling Club, MNNIT is a group of aeromodelling and aviation enthusiasts sharing a unique passion of flying and an innate desire to push the bounds of airspace like they have never been before. Aeromodelling is a work of art where engineering and creativity synergize in developing sophisticated flying systems. With the immense scope of creativity and interdisciplinary nature, it gives a person chance to develop a complete system with people across various departments and specialization.
+              </p>
+            <p class="lead">This club welcomes all those students who perceive this as a science, hobby or a sport. Objective of it is to unify these like-minded enthusiasts on a common platform and do something exciting in new ways.
+            </p>
+            <!-- <p class="lead">They collect blankets, woollen clothes from the college students and nearby areas and distribute them to needy in winters.
+            </p>
+            <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+            </p> -->
+            <a class="lead" target="_blank" href="https://www.facebook.com/AeroClubMNNIT/">Click here to know more</a>   
+
+           </div>
+            <div class="col-md-5 order-md-1">
+              <img src={% static "SMP/blog/club/aero.jpg"%} alt="aero" class="img2 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
+              <p id="enactus"></p>
+              <h2 class="featurette-heading">ENACTUS</h2>
+              <p class="lead">Enactus works with a vision to create a better, more sustainable world. Enactus MNNIT is the student chapter of Enactus at Motilal Nehru National Institute of Technology, Allahabad. We believe that every individual can make an impact in their community by using the positive power of entrepreneurship.
+              </p>
+              <p class="lead">Enactus MNNIT Allahabad is a committee of registered students who work along the guidelines of ENACTUS - a non-profit international NGO constituting 36 nations globally, with a prime objective of improving the standards of living across the world. We recognize the abundant human skill in the underprivileged section of our society and work upon ways to develop business model to help them become self-sufficient in terms of income and overcome the stigma of social discrimination. This club conduct various projects based on numerous surveys and countless researches which tackles various problems in accordance to the 17 sustainable development goals designed by the united nations leaders for better world.
+              </p>
+              <!-- <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
+    
+              </p> -->
+            <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+            <a class="lead" target="_blank" href="https://www.facebook.com/enactusmnnit/">Click here to know more</a>   
+          </div>
+            <div class="col-md-5">
+              <img src={% static "SMP/blog/club/enactus.png"%} alt="enactus" class="img1 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+          <hr class="featurette-divider">
+          <div class="row featurette">
+              <div class="col-md-7 order-md-2">
+                <p id="astronomy"></p>
+                <h2 class="featurette-heading">Astronomy Club</h2>
+                <p class="lead">The curiosity of the students regarding the universe are taken care by this club. The main aim of the club is to promote amateur astronomy and popularise it in the institute. Frequent lectures and talks by students, faculty and other renowned institutions are organised by the members for the campus community.
+                </p>
+                <p class="lead">This club is group of 10 people from various years of the college exploring various theoretical and experimental aspects of Astronomy. Some of the major projects this club is working upon include 3D printing a telescope, Solar system and voyager trajectory simulation in MATLAB, Radio Astronomy at RAD@home, Processing of planetary image data, sky objects cataloguing and the list goes on and on.
+                </p>
+              <p class="lead">This club welcomes all those students who perceive this as a science, hobby or a sport. Objective of it is to unify these like-minded enthusiasts on a common platform and do something exciting in new ways.
+              </p>
+              <p class="lead">This club compels the soul to look upwards and leads us from this world to another
+              </p>
+              <!-- <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+              </p> -->
+              <a  class="lead" target="_blank" href="https://www.facebook.com/AeroClubMNNIT/">Click here to know more</a> 
+             </div>
+              <div class="col-md-5 order-md-1">
+                <img src={% static "SMP/blog/club/astronomy.jpg"%} alt="astro" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+              </div>
+            </div>
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+              <div class="col-md-7">
+                <p id="dance"></p>
+                <h2 class="featurette-heading">Dance Club</h2>
+                <p class="lead">Dance club, one of the official club, is the most fascinating and glamorous clubs of MNNIT with maximal audience participation. To drive your interest into this charismatic club we have duo dance, group dance events throughout the year. This club assures the audience that the dance performances will leave them flabbergasted. The main event Razzmatazz during the annual cultural fest, CULRAV attract umpteen people. Swagat, the annual fresher’s event which is organized at the starting of the academic year is a platform for freshers to unveil their outstanding skills and passion to be a virtuoso dancer. This year club plan to organize dance workshops for freshers as well as an event wherein freshers can show cast their talent. </p>
+                <p class="lead">"Great dancers are great because of their passion".
+                  Apart from this, this club played a pivotal role in bringing home the SPRINGFEST Championship Trophy twice in consecutive years.
+                  </p>
+                <!-- <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
+      
+                </p> -->
+              <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+              <a class="lead" target="_blank" href="https://www.facebook.com/dcm.mnnit/">Click here to know more</a> 
+            </div>
+              <div class="col-md-5">
+                <img src={% static "SMP/blog/club/dance.jpg"%} alt="dance" class="img1 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+              </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                  <p id="mhm"></p>
+                  <h2 class="featurette-heading">Media House of MNNIT</h2>
+                  <p class="lead">MHM, one of the most active clubs of the institute is a group or rather a family of well profound and innovative people who work behind the lens and laptops. Trying to capture the moments and recreating them with photos and videos, they work throughout the year to capture that perfect moment, to find those perfect lines and shades in the posters which make the events even livelier.
+                  </p>
+                  <p class="lead">They cover every small to big events happening in the college.
+                    Designing an idea from scratch and illustrating it through posters, photos, videos or any empty creative space is one of the strengths of the club. Apart from covering the events of the institution, this club also organises various events such as Chitra Sangam, Dark Room Photography, various designing and videography contests. Winning various competitions in IIT BHU, IIT KGP and IIT BOMBAY is another feature in the Cap of Media House of MNNIT.
+                    </p>
+                <!-- <p class="lead">This club welcomes all those students who perceive this as a science, hobby or a sport. Objective of it is to unify these like-minded enthusiasts on a common platform and do something exciting in new ways.
+                </p>
+                <p class="lead">This club compels the soul to look upwards and leads us from this world to another
+                </p> -->
+                <!-- <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+                </p> -->
+                <a class="lead" target="_blank" href="https://www.facebook.com/MHM.MNNIT/">Click here to know more</a><br>
+                <a  class="lead" target="_blank" href="https://www.youtube.com/channel/UCHytQI3z_Rx-JGVayx8PG4g">Youtube Channel</a>
+
+               </div>
+                <div class="col-md-5 order-md-1">
+                  <img src={% static "SMP/blog/club/mhm.jpg"%} alt="mhm" class="img6 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                </div>
+              </div>
+              <hr class="featurette-divider">
+
+              <div class="row featurette">
+                <div class="col-md-7">
+                  <p id="drams"></p>
+                  <h2 class="featurette-heading">Dramatics Club</h2>
+                  <!-- <p class="lead">Dance club, one of the official club, is the most fascinating and glamorous clubs of MNNIT with maximal audience participation. To drive your interest into this charismatic club we have duo dance, group dance events throughout the year. This club assures the audience that the dance performances will leave them flabbergasted. The main event Razzmatazz during the annual cultural fest, CULRAV attract umpteen people. Swagat, the annual fresher’s event which is organized at the starting of the academic year is a platform for freshers to unveil their outstanding skills and passion to be a virtuoso dancer. This year club plan to organize dance workshops for freshers as well as an event wherein freshers can show cast their talent. </p> -->
+                  <p class="lead">When one needs to express oneself, there can be no better way than to play out the character that best describes the pot of emotions boiling inside. Alchemy, the official dramatics society of MNNIT aims at perfecting those “expression of thoughts” in every way possible, boosting one’s self-confidence to unprecedented levels. Whether it be classics or comedy, street plays or nautanki, mono acting or script writing, you can show your metal here, and discover talents which you never knew you had in yourself. Alchemy is renowned for its amazing performances with specialization in street plays and unmatched originality, and has performed extremely well in Springfest at IIT KGP, bagging second prizes in both stage play and mono acting in 2019. 
+                  </p>
+                  <!-- <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
+        
+                  </p> -->
+                <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+                
+                <a class="lead" target="_blank" href="https://www.facebook.com/Alchemy.Dramatics/">Click here to know more</a>
+                </div>
+                <div class="col-md-5">
+                  <img src={% static "SMP/blog/club/drams.jpg"%} alt="drams" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                </div>
+              </div>
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                    <p id="electronics"></p>
+                    <h2 class="featurette-heading">Electronics Society</h2>
+                    <p class="lead">Electronics society is the club run by final year students of Electronics and communication branch. It provides extra classes to hone the soft skills for the first, second- and third-year students along with preparing for the judgement day with mock GD’s and mock interviews.
+                    </p>
+                    <p class="lead">These have both technical and non-technical topics to ensure holistic preparation of the students as they shed their fear and work their way up the ladder. Members of this club assign numerous projects to the students which will help them for the placements. It can be seen as two-way benefit proposition-seniors get to polish their skills while teaching juniors get wonderful peer-to-peer learning. It’s a win-win for one and all.
+                    </p>
+                  <!-- <p class="lead">This club welcomes all those students who perceive this as a science, hobby or a sport. Objective of it is to unify these like-minded enthusiasts on a common platform and do something exciting in new ways.
+                  </p>
+                  <p class="lead">This club compels the soul to look upwards and leads us from this world to another
+                  </p> -->
+                  <!-- <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+                  </p> -->
+                  <a  class="lead" target="_blank" href="https://www.facebook.com/avishkar.electromania/">Click here to know more</a>
+                 </div>
+                  <div class="col-md-5 order-md-1">
+                    <img src={% static "SMP/blog/club/electro.jpg"%} alt="electro" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                  </div>
+                </div>
+                <hr class="featurette-divider">
+                <div class="row featurette">
+                <div class="col-md-7">
+                  <p id="athletics"></p>
+                  <h2 class="featurette-heading">MNNIT Athletics Club</h2>
+                  <p class="lead">In sports, you simply aren't considered a real champion until you have defended your title successfully. Winning it once can be a fluke; winning it twice proves you are the best. MAC- MNNIT athletics club has turned out to be the best among top engineering colleges in India. The club not only won once but successfully retained its title in continuation for years. Having seen them practice, it fully justifies the fact that staying on top takes much more efforts than reaching the top. Be it Inter NIT Athletics, ‘Udgosh’ at IIT Kanpur, ‘Sangram’ at IIT Roorkee or ‘Spardha’ at IIT BHU, they have given jaw dropping performances fabricated with some real athletic abilities. 
+                  </p>
+                  <p class="lead">‘Sky is the limit’ a sentence engraved on the mind of each of the athletes. A proper amalgamation of coordination and support among the teammates make the troupe stand apart from others.
+                  </p>
+                  <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
+        
+                  </p>
+                  <a class="lead" target="_blank" href="https://www.facebook.com/mnnitatheleticsclub/">Click here to know more</a>   
+        
+                <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+                </div>
+                <div class="col-md-5">
+                  <img src={% static "SMP/blog/club/athletics.jpg"%} alt="ath" class="img1 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                </div>
+              </div>
+              
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                    <p id="music"></p>
+                    <h2 class="featurette-heading">Music Club</h2>
+                    <p class="lead">Nishaad, the music club of MNNIT Allahabad. The club had very humble beginnings when only people who were part of the club used to participate. As time slowly progressed, it soon became one of the fastest growing clubs in MNNIT with huge participation and audience for the events. The club promotes good music and the seniors hone the talents of their juniors. The music club is at the forefront of every college event from Culrav to Republic day gathering. They have invited bands like The Local Train, Parvaaz, Chronic Xorn to perform in the college.
+                    </p>
+                    <p class="lead">Apart from this, the club has a plethora of achievements under its belt. Every year members of the club represent it in major cultural fests across India, Springfest at IIT KGP, Antaragini at IIT Kanpur, Effervescence at IIIT Allahabad, Kaashiyatra at IIT BHU and Mood Indigo at IIT Mumbai. The club members have secured pole positions at these fests.
+                    </p>
+                  <!-- <p class="lead">This club welcomes all those students who perceive this as a science, hobby or a sport. Objective of it is to unify these like-minded enthusiasts on a common platform and do something exciting in new ways.
+                  </p>
+                  <p class="lead">This club compels the soul to look upwards and leads us from this world to another
+                  </p> -->
+                  <!-- <p class="lead">Visiting Blind Schools and Old Age Homes and carrying out Blood Donation Camp are some of the main initiatives taken by this club. Aiming at making this society a better place to live in, Rotaract Club becomes one of the major attractions of MNNIT.
+                  </p> -->
+                  <a class="lead" target="_blank" href="https://www.facebook.com/nishaadmnnit/">Click here to know more</a>
+                 </div>
+                  <div class="col-md-5 order-md-1">
+                    <img src={% static "SMP/blog/club/music.jpg"%} alt="music" class="img1 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                  </div>
+                </div>
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+<br><br>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; SMP - MNNIT Allahabad</p>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src= "{% static "SMP/assets/js/vendor/jquery.slim.min.js" %}"><\/script>')</script><script src={% static "SMP/assets/dist/js/bootstrap.bundle.js"%}></script></body>
+</html>

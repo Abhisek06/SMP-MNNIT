@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Shradhey Pathak,MNNIT Allahabad">
+    <title>Events - SMP</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+<link href={% static "SMP/assets/dist/css/bootstrap.css"%} rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .more {display: none;}
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href={% static "SMP/blog/event.css"%} rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="../extra_curricular/">Back To Extras</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../sports/">Sports</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../clubs/">Clubs</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+      </ul>
+      <!-- <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+
+    <div id="myCarousel" class="carousel slide  d-block d-md-block" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/culrav.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Culrav : Annual Cultural Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/avish5.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Avishkar : Annual Techno Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/avishkar.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Prosang : Annual Robo And Aero Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/josh.jpg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Josh : Annual Sports Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img img-fluid" src={% static "SMP/blog/pics/eloquence.jpeg"%} alt="Pic">
+            <!-- <svg class="bd-placeholder-img img-fluid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h4>Eloquence : Annual Literary Fest</h4>
+                <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
+                <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+              </div>
+            </div>
+          </div>
+      </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+    
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Swagat - The Freshers</h2>
+        <p class="lead masthead-brand">After a month-long exercise and wanderings through the maze of counselling for admission in one of the most prestigious NITs of the country, the newly admitted batch of first year students of undergraduate and postgraduate programmes at Motilal Nehru National Institute of Technology (MNNIT), Allahabad witnesses the annual freshers’ function “Swagat” at the sprawling Rajiv Gandhi Multi-Purpose Hall.
+        </p> <span class="dots">...</span><span class="more">
+        <p class="lead masthead-brand ">This is very first event of college when you start your college life here at MNNIT. It is an event which acts as a platform for the newly inducted students to exhibit their extra-curricular talents. Besides it also facilitates better co-ordination and communication between the freshers and the senior students. It is purely an event dedicated to students, hence right from the selection of the events to the management of the function, the responsibility is being borne by senior students in the form of a committee of student co-ordinators.
+        </p>
+        <p class="lead masthead-brand">There are 14 committees that make this event a grand success. This ranges from dainty dances like Garba, Marathi, Bengali, SouthFolk, Bhangra, Rajasthani, Inaugural and Western to the charming ramp walks of the footprints committee and from the extraordinary talent of the dramatics committee to the technical upbringing of Media House of MNNIT. The Arts committee brightens the stage with a outstanding back drop painted by vibrant colours. The Music committee which sets the stage on fire with their melodious and enchanting performances. The Oration committee which lefts the audience awestruck with their affluent skills.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+
+      </div>
+      <div class="col-md-5">
+        <img src={% static "SMP/blog/club/swagat.jpg"%} alt="swagat" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-1">
+        <h2 class="featurette-heading">Avishkar - The Techfest</h2>
+        <p class="lead">Avishkar, MNNIT is one of the biggest Science and Technology Festival. It came into existence, with the motto of promoting science and technology and to foster genuine interest in students to come up with technological solutions to real life problems. Techfest has surpassed many years of creating an unmatched aura of a science and technology spectacle year after year. It’s captivating night shows, famous artists and fun setups keeps the festive spirit alive throughout the 4 days of the festival.
+        </p><span class="dots">...</span><span class="more">
+        <p class="lead">Having the theme ‘ideate, innovate and create’, the fest has around 60 events being organised over the period of four days. There are over 12 major banners under which whole Avishkar takes place into account. It includes Aerodynamics, Cyberquest, Mechrocosm, Electromania, Power Surge, Genesis, Rasayans, Nirman, Oligopoly, Kreedomania, Monopoly and Robomania. 
+        </p>
+        <p class="lead">Every year Avishkar occurs at mid-September which witnesses a huge participation from all branches and years. Avishkar’ 19 marked a huge success all it had a team of dedicated students, who worked day and night passionately. From self-driving cars which can follow lanes and identify road signals to creating ‘Vikram’ lander inspired ATVs for different types of terrains on moon, form google assistant based home automation to creating your own android app Avishkar keeps on raising the bar year after year.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+
+        <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src={% static "SMP/blog/pics/avish3.jpg"%} alt="avish" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Culrav - The Cultural Fest</h2>
+        <p class="lead">Initiated in 1987, Culrav has emerged as the most resplendent college-based fest in Northern India and as one of the most awaited cultural event of the country. Culrav have breath taking competitions, glamorous pro-nites and appealing informal events due to which Culrav has attracted humongous footfall from colleges all over the country. The likes of "Farhan Akhtar, "Piyush Mishra " and "Vinay Pathak" have graced Culrav’s stage along with exhilarating performances from “The Local Train”,” Shirley Sethia”, "DJ Zaeden" and many more. 
+          There are a lot of events that occurs during the fest such as 
+            </p><span class="dots">...</span><span class="more">
+        <p class="lead"><strong> Razzmatazz</strong> where various dance teams from different colleges compete to win the title being judged by the top dancers every year.</p>
+        <p class="lead"><strong> Rangmanch and Parimal</strong> an umbrella event for all Hindi literary events</p>
+        <p class="lead"><strong> Kavya Sandhya</strong> the inaugural flagship poetry night of Culrav which attracts connoisseurs of poetry, showcasing their talent judged by eminent personalities.
+        </p>
+        <p class="lead"><strong> Celebrity and Pro-nites </strong>the last two nights of Culrav witnesses thrilling performances from famous celebrities and artists in the fields of rock, hip-hop or EDM.
+        </p>
+        <p class="lead"><strong> Spandan </strong>which witnesses the charming glamourous ramp walks.
+        </p>
+        <p class="lead"><strong> Informal Events </strong>from "Stand-up Comedy" to "Googly Cricket" it has a wide variety of events in this arena, to enthral the audiences all the time wherein they stand a chance to win lots of goodies and merchandise.
+        </p>
+        <p class="lead"><strong> Stunt Show </strong>being hosted by Hero Moto Corp has gathered huge amount of audience last year.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+
+        
+        <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+      </div>
+      <div class="col-md-5">
+        <img src={% static "SMP/blog/pics/culrav.jpg"%} alt="avish1" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Eloquence - The Literary Fest</h2>
+          <p class="lead">"While thought exists, words are alive and literature becomes an escape, not from, but into living."
+          </p><span class="dots">...</span><span class="more">
+          <p class="lead"> One of the most awaited Literary events of our college is Eloquence, where your words and your pen are the only weapons.
+        </p>
+          <p class="lead">There are plenty of events that occurs side by side. Lit-Chat, the flagship event of Eloquence, Gen-Lit Quiz, Model United Nations (MUN), Model Indian Parliament (MIP) where a student witness some of the thought provoking and fierce debates. It also consists of events where budding poets and story tellers are left free to race their creative minds and pen it down artistically. 
+        </p>
+        <p class="lead">Eloquence is a wholesome experience for the literary enthusiasts to express themselves.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+          <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src={% static "SMP/blog/club/eloq.jpg"%} alt="elo" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+
+
+      <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Renaissance - The E - Summit</h2>
+        <p class="lead">Renaissance, an entrepreneurship summit, under Design Innovation and Incubation Centre (DIIC) envisages to support innovative ideas of an individual or a group of individuals in areas related to the development of new products, goods for the benefit of mankind and/or novel approaches addressing social issues for inclusive development of the society.
+        </p><span class="dots">...</span><span class="more">
+        <p class="lead">E-Cell helps host Renaissance. This summit includes various events such as E-Talk, E-Plan, Biz-quiz, Panel Discussion, IPL Auction, Stock Market and many more.
+        </p>
+        <p class="lead">Renaissance also intends to bring together technologists, engineers, medical professionals, business analysts to develop all-inclusive innovation that creates an impact on the quality of life through talks, discussions and workshops.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+      <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+      </div>
+      <div class="col-md-5">
+        <img src={% static "SMP/blog/club/renai.jpg"%} alt="renai" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Prosang - The Aero and Robo Event</h2>
+          <p class="lead">Prosang as a word is a portmanteau of Prodyogiki and Sangam. It is a tech summit organised by the Robotics and Aeromodelling Clubs of MNNIT. It is generally a three-day event which consists of technical events from various domains like Robotics, Aeromodelling, Electronics, Computer Club, Mechatronics.
+        </p><span class="dots">...</span><span class="more">
+          <p class="lead"> With participation from 50+ colleges and 150+ schools from around the country, Prosang promises to be richer and bigger than ever before! It has events varying like Idea Presentation and Blueprint, open school championship, tech events, project exhibition all that require student to be genius of the moment. Several competitions are held followed by project demonstration of robotics and aero modelling club.
+        </p>
+          <p class="lead">Prosang with an array of exciting events allows to have fun while simultaneously learning amongst brilliant minds from around the country! 
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+       </div>
+        <div class="col-md-5 order-md-1">
+          <img src={% static "SMP/blog/pics/avish2.jpg"%} alt="pro" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Gno Talks - The Talk Show</h2>
+          <p class="lead">Another event which occurs during Avishkar is Gno Talks. The GnoTalks is a unique conceptualised talk show where celebrities from various walks of life perform their art and inspire the budding techies and managers with their stories and struggles.
+         </p><span class="dots">...</span><span class="more">
+          <p class="lead">GnoTalks has emerged from an open panel discussion to people of great intellect inspiring young minds and leaving them in awe.
+            Motto of Gno Talks "Where Actions Speak" clearly states the ideology and the need of this eve. Speakers from various fields present not to just speak but to interact with the audience. For a brief moment in history, this is zenith of human intellect and abilities.
+             </p>
+          <p class="lead">MNNIT had a very profound panel for gnoTalks which includes Param Vir Chakra winner Subedar Major Yogendra Singh Yadav, The Robin Hood Army, TVF, stand up comedian Rahul Subramaniam, Chetan Bhagat, former captian of Indian football team I.M. Vijayan, , co-founder of Super 30 Abhayanand, one of the finest archers in India Sanjeev Kumar Singh, speed and sand painter and sculptor Sarvam Patel and the list goes on and on.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+        <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
+        </div>
+        <div class="col-md-5">
+          <img src={% static "SMP/blog/club/gno.jpg"%} alt="gno" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Gnosiomania - The Quiz League</h2>
+          <p class="lead">This is one of the most prominent and the distinguished quiz fests of the country where prominent quizmasters such as Somnath Chanda, Adityanath Mubai, Major Chandrakant Nair and Kushan patel  conducts quizzes on the genres like General Quiz, Maha Quiz, Sports Quiz , Mela Quiz etc with the quizzers from all over India.
+        </p><span class="dots">...</span><span class="more">
+          <p class="lead">Gnosiomania is thus 2-day grand celebration of gyan, fundae and human ingenuity.
+        </p></span>
+        <button onclick="myFunction()" class="myBtn btn btn-primary">Read more</button>
+       </div>
+        <div class="col-md-5 order-md-1">
+          <img style="max-height: 500px;" src={% static "SMP/blog/pics/gnosio1.jpg"%} alt="gno" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        </div>
+      </div>
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+<br><br>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; SMP - MNNIT Allahabad</p>
+  </footer>
+</main>
+<script>
+  var allButtons = document.querySelectorAll('.myBtn');
+allButtons.forEach(function(btn){
+btn.addEventListener('click', myFunction);
+});
+
+function myFunction() {
+var allBtns = document.querySelectorAll(".myBtn");
+var allDots = document.querySelectorAll(".dots");
+var allMore = document.querySelectorAll(".more");
+
+var btnText = allBtns[[...allBtns].indexOf(this)];
+var dots = allDots[[...allBtns].indexOf(this)];
+var moreText = allMore[[...allBtns].indexOf(this)];
+
+if (dots.style.display === "none") {
+  dots.style.display = "inline";
+  btnText.innerHTML = "Read more";
+  moreText.style.display = "none";
+} else {
+  dots.style.display = "none";
+  btnText.innerHTML = "Read less";
+  moreText.style.display = "inline";
+}
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src= "{% static "SMP/assets/js/vendor/jquery.slim.min.js" %}" ><\/script>')</script><script src={% static "SMP/assets/dist/js/bootstrap.bundle.js"%}></script></body>
+</html>

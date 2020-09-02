@@ -1,0 +1,31 @@
+.btn .btn-lg .btn-primary .btn-block{
+    float: right;
+}
+.para{
+    margin-right: 150px;
+    margin-left: 80px;
+}
+.heading{
+    font-family: "Times New Roman", Times, serif;
+    color: blanchedalmond;  margin-right: 150px;
+    margin-left: 80px;
+}
+body{
+    background-image: url(pics/uk4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+.para{
+    color: blanchedalmond;
+}
+.Youtube{
+    margin-right: 150px;
+    margin-left: 80px;
+    float: center;
+}

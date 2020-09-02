@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="SMP, MNNIT ALLAHABAD">
+    <title>SMP - MNNIT</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
+    <link href="{% static "SMP/assets/dist/css/bootstrap.css" %}" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+      <style>
+            img {
+              float:right;
+                width:100%;
+                height:100%;
+            }
+        </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "SMP/blog/mainLi.css" %}" rel="stylesheet">
+    <link href="{% static "SMP/blog/exp.css" %}" rel="stylesheet">
+  </head>
+
+
+<div style="background-color: cornsilk; ">
+  <body>
+    <div class="container" style="background-color: cornsilk;">
+      <br>
+        <img src="{% static "SMP/blog/pics/logo.png" %}" alt="logo" style="max-width: 100px;" style="max-height: 100px" class="img-responsive">
+    <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between ">
+      <div class="col-4 text-center">
+        <h1 class="img-responsive" style="font-size:25px">STUDENT MENTORSHIP PROGRAMME - MNNIT ALLAHABAD</h1>
+        <h6 style="font-size:15px">Office of the Dean (Students Welfare)</h6>
+      </div>
+      <!-- <div class="col-4 d-flex justify-content-end align-items-center">
+        {% if user.is_authenticated %}
+          <a class="btn btn-sm btn-outline-secondary btn-lg" href="logout/">Logout</a>
+          <a class="btn btn-sm btn-outline-secondary btn-lg" href="Your_profile/">details</a>
+        {% else %}
+          <a class="btn btn-sm btn-outline-secondary btn-lg" href="login/">Login</a>
+        {% endif %}
+      </div> -->
+    </div>
+  </header>
+
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color:crimson">
+    <!-- <img src="{% static "SMP/blog/pics/logo.png" %}" alt="logo" style="max-width: 35px;" style="max-height: 35px" class="img-responsive"> -->
+    <div class="">
+      {% if user.is_authenticated %}
+        <a style="color: black;" class="btn btn-sm btn-outline-secondary btn-lg" href="logout/">Logout</a>
+        <a style="color: black;" class="btn btn-sm btn-outline-secondary btn-lg" href="Your_profile/">details</a>
+      {% else %}
+        <a  style="color: black;" class="btn btn-sm btn-outline-secondary btn-lg" href="login/">Login</a>
+      {% endif %}
+        <!-- <a class="btn btn-sm btn-outline-secondary" href="details/">details</a> -->
+    </div>
+    <!-- <a class="navbar-brand mr-auto mr-lg-0" href="#">Mentors</a> -->
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="details/">Mentors</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="alumuni/">Our Alumunus</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="academics/">Academics</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="announce/">Announcements</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="campus_life/">Campus-Life</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="extra_curricular/">Extra-Curricular</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="FAQ/">FAQ's</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contacts/">Contact Us</a>
+        </li>
+        <!-- <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+      </ul>
+
+    </div>
+  </nav>
+      <!-- <div class="nav-scroller py-1 mb-2 "> -->
+            <!-- <nav class="nav nav_d_flex_justify-content-between"  style="background-color:crimson">
+            <a style="color: white;" class="nav-link p-2"  href="details/">Mentors</a>
+            <a style="color: white;" class="nav-link p-2"  href="alumuni/">Our Alumunus</a>
+            <a style="color: white;" class="nav-link p-2" href="academics/">Academics</a>
+            <a style="color: white;" class="nav-link p-2" href="campus_life/">Campus Life</a>
+            <a style="color: white;" class="nav-link p-2" href="resources/">Facilities</a>
+            <a style="color: white;" class="nav-link p-2" href="extra_curricular/">Extra-Curricular</a>
+            <a style="color: white;" class="nav-link p-2" href="FAQ/">FAQ'S</a>
+            <a style="color: white;" class="nav-link p-2" href="announce/">Announcements</a>
+            <a style="color: white;" class="nav-link p-2" href="contacts/">Contact Us</a>
+
+            </nav> -->
+      <!-- </div> -->
+ <!-- <hr class="featurette-divider"> -->
+
+  <div id="continue-read" class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Welcome to MNNIT Allahabad</h1>
+      <p class="lead my-3">This website has been made to introduce incoming freshers to the life at MNNIT Allahabad.
+        Explore this website and use it to make an informed choice about your college and department.
+        You won't feel leftout on this platform. Have fun!</p>
+      <p class="lead mb-0"><a href="Read_More/" class="text-white font-weight-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"  style="background-color:crimson">
+          <strong class="d-inline-block mb-2 text-primary">Pages From History</strong>
+          <div class="mb-1 text-muted"></div>
+          <p class="card-text mb-auto" style="color: white;">The college has the distinction of the being first in the country to start an undergraduate programme in Computer Science & Engineering, in 1976-77.</p>
+          <br>
+          <p style="color: white;" >The foundation stone was laid by Jawaharlal Nehru, the first Prime Minister of India.The main building of the college was inaugurated by Prime Minister Lal Bahadur Shastri on 18 April 1965.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"  style="background-color:crimson">
+          <img style="width:500px" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="height:250px" src= "{% static "SMP/blog/pics/Inauguration_of_MNNIT.jpg" %}" alt = "Geeks Image">
+        </div>
+
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h4 class="pb-4 mb-4 font-italic border-bottom">
+            Message By Our Director Sir
+          </h4>
+          <iframe width="400" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="200" src="https://www.youtube.com/embed/Sz6YRpyefpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br><br>
+         <h4 class="pb-4 mb-4 font-italic border-bottom">
+          Culrav: The Cultural Fest
+        </h4>
+        <iframe width="400" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="200" src="https://www.youtube.com/embed/_Ifnk69C9NE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br>
+        <h4 class="pb-4 mb-4 font-italic border-bottom">
+          Avishkar: The Technical Fest
+        </h4>
+        <iframe width="400" height="200"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="https://www.youtube.com/embed/49hVGa5YMLc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+        <br><br>
+          <hr class="featurette-divider">
+        <!-- <footer class="container">
+          <p class="float-right"><a href="#">Back to top</a></p>
+          <p>&copy; SMP - MNNIT Allahabad</p>
+        </footer> -->
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 rounded style=" style="background-color: crimson;">
+        <h4 class="font-italic">Announcements</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a style="color: white;" href="announce/">Click Here to Know More...</a></li>
+          <li><a style="color: white;" href="http://www.mnnit.ac.in/index.php/notice-board" target="_blank">MNNIT Notice Board</a></li>
+          <!-- <li><a style="color: white;"href="https://www.facebook.com/mentorshipMNNIT" target="_blank">SMP - FB Page</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/mnnit.culrav" target="_blank">Culrav</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/mnnit.avishkar" target="_blank">Avishkar</a></li>
+           <li><a style="color: white;" href="https://www.hack36.com/" target="_blank">Hack 36</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/prosangmnnit" target="_blank">Prosang</a></li>
+          <li><a style="color: white;"href="https://academics.mnnit.ac.in/convocation/" target="_blank">Convocation</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/MHM.MNNIT" target="_blank">Media House of MNNIT</a></li> -->
+        </ol>
+      </div>
+
+      <div class="p-4 p-4 mb-3 rounded" style="background-color:crimson">
+        <h4 class="font-italic ">Important Links</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a style="color: white;"href="http://www.mnnit.ac.in/" target="_blank">Official Website</a></li>
+          <li><a style="color: white;" href="http://academics.mnnit.ac.in/" target="_blank">Academic Portal</a></li>
+          <li><a style="color: white;"href="http://www.mnnit.ac.in/swo/" target="_blank">Dean (Students' Welfare)</a></li>
+          <li><a style="color: white;"href="http://moodle.mnnit.ac.in/login/index.php" target="_blank">MNNIT Moodle Server</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/mnnit.culrav" target="_blank">Culrav</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/mnnit.avishkar" target="_blank">Avishkar</a></li>
+          <li><a style="color: white;"href="https://www.hack36.com/" target="_blank">Hack 36</a></li>
+          <li><a style="color: white;" href="https://www.facebook.com/prosangmnnit" target="_blank">Prosang</a></li>
+          <li><a style="color: white;"href="https://academics.mnnit.ac.in/convocation/" target="_blank">Convocation</a></li>
+          <li><a style="color: white;"href="https://www.facebook.com/MHM.MNNIT" target="_blank">Media House of MNNIT</a></li>
+
+
+        </ol>
+      </div>
+
+      <div class="p-4 p-4 mb-3 rounded" style="background-color: crimson;">
+        <h4 class="font-italic">Follow Us On</h4>
+        <ol class="list-unstyled">
+          <!-- <li><a href="#">Instagram</a></li> -->
+          <li><a  style="color: white;"href="https://www.facebook.com/mentorshipMNNIT" target="_blank">Facebook</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+<footer class="container"style="background-color::rgb(248, 42, 42)">
+  <p style="color: white;" class="float-right"><a href="#">Back to top</a></p>
+  <p style="color:black;">&copy; SMP - MNNIT Allahabad</p>
+</footer>
+
+</body>
+</div>
+
+
+<script>
+  $(function () {
+  'use strict'
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  })
+})
+
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="{% static "SMP/assets/js/vendor/jquery.slim.min.js" %}"><\/script>')</script><script src="{% static "SMP/assets/dist/js/bootstrap.bundle.js" %}"></script></body>
+       <script src="{% static "SMP/blog/home.js" %}"></script>
+</body>
+</html>
